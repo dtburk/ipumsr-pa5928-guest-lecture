@@ -70,7 +70,7 @@ started with **US census data** has grown to include 9 collections
 *mostly just segueing to projects*
 
 
-# Poll: Which IPUMS data collections have you used already? (7)
+# NO HEADING (7)
 
 
 
@@ -87,12 +87,12 @@ started with **US census data** has grown to include 9 collections
 
 # NO HEADING (10)
 
-
+Check out Matt Gunther's blog using IPUMS Global Health Data
 
 
 # NO HEADING (11)
 
-Check out Matt Gunther's blog using IPUMS Global Health Data
+
 
 
 # NO HEADING (12)
@@ -115,34 +115,24 @@ Check out Matt Gunther's blog using IPUMS Global Health Data
 
 
 
-# NO HEADING (16)
-
-
-
-
-# Poll: Which IPUMS data collections are you most excited to use in the future ? (17)
-
-
-
-
-# So what is IPUMS? (18)
+# So what is IPUMS? (16)
 
 So ipums really is **data** and a whole lot of it. These 9 different projects interact with different types of data and at different scales but they are united in the use of metadata that helps contextualize the data
 
 *So I know you're asking yourselves..*
 
 
-# So what is IPUMS? (19)
+# So what is IPUMS? (17)
 
 
 
 
-# Overview (20)
+# Overview (18)
 
 
 
 
-# What is ipumsr? (21)
+# What is ipumsr? (19)
 
 (Metadata such as value labels, variable labels, and detailed variable 
 descriptions.)
@@ -150,7 +140,7 @@ descriptions.)
 Initial API support will be for IPUMS USA, with more projects to follow soon.
 
 
-# Why use ipumsr? (22)
+# Why use ipumsr? (20)
 
 Regarding "One package": Without ipumsr, you'd need to use a variety of
 different approaches from different packages to read in and explore IPUMS
@@ -166,19 +156,19 @@ of IPUMS data.
 *a one stop shop that makes it easy to work with ipums data*
 
 
-# One package to rule them all (23)
+# One package to rule them all (21)
 
 
 
 
-# Why use ipumsr? (24)
+# Why use ipumsr? (22)
 
 Regarding "More features": The aforementioned IPUMS API support will be the next
 big feature. Another potential new feature is adding tools for properly handling
 survey weights. Let us know what would be helpful to you via GitHub or email.
 
 
-# Why use ipumsr? (25)
+# Why use ipumsr? (23)
 
 There are other ways to read IPUMS data into R, but ipumsr is the fastest way 
 to read the data in with attached metadata, such as variable and value labels.
@@ -186,42 +176,43 @@ to read the data in with attached metadata, such as variable and value labels.
 Relatively small example, so the time costs can grow with larger datasets.
 
 
-# Poll: Have you ever used ipumsr before? (26)
-
-If you've never used ipumsr before you may be asking *where can i download it*
-
-
-# Installing ipumsr (27)
+# Installing ipumsr (24)
 
 More advanced users might be thinking, *"this stable release is boring"* in which case you can download the development version to test out the latest features. 
 
-The API functions are in the development version, but the API itself is not yet 
-publicly available.
+The API functions are in the development version. The API itself is not yet 
+publicly available, but email IPUMS support at ipums@umn.edu if you're 
+interested in becoming a beta tester.
 
 
-# To run the code in this webinar (28)
+# To run the code in this webinar (25)
 
 Repeat: slides/recording will be available. To run this code yourself you can clone/download the repo from our github. This provides the data extracts you'll need. 
 
 However, you may need to install some additional packages used in the example code below, as shown on the next slide.
 
 
-# Install R packages (as needed) (29)
+# Install R packages (as needed) (26)
 
 reminder, installing packages only needs to happen once, but some packages do update frequently so it can be a good idea to re-install once in a while
 
 
-# Loading packages (30)
+# Loading packages (27)
 
 These packages are used in some of the examples we will walk through.
 
 
-# Overview (31)
+# Overview (28)
 
-Dan passes to Kara/Derek
+Dan passes to Derek. Derek switches to a web demo of extract system.
 
 
-# Downloading your data extract (32)
+# Overview (29)
+
+Website demo ends, back to slides. Derek passes to Kara.
+
+
+# Downloading your data extract (30)
 
 Kind of confusing how to save the DDI/.xml file. THIS IS HOW.
 DDI is EXTREMELY important, as it contains all the instructions regarding the METADATA
@@ -241,7 +232,7 @@ most IPUMS projects follow this standard.
 Make sure to save the data and DDI files in the same location.
 
 
-# Downloading your data extract (33)
+# Downloading your data extract (31)
 
 The links under "Command Files" contain program-specific code for reading in the
 data. The R one contains the code we'll show on the next slide.
@@ -250,7 +241,7 @@ This helper code checks that you have ipumsr installed, and if you do, it reads
 in the DDI codebook and data into separate objects.
 
 
-# Read in the data (34)
+# Read in the data (32)
 
 So you've downloaded both the data and the DDI codebook, and saved them in the 
 same folder. Here's how you actually read the data into R.
@@ -266,44 +257,50 @@ preserve the original metadata once you start messing around with the data.
 
 Notice that in both cases we are supplying the codebook (either already read in
 or as a file path), not the data file, to `read_ipums_micro()`. The fact that we
-don't point to the actual data file when reading in the data might confusing. If
-I want to read in the data shouldn't I point to the data file?
+don't point to the actual data file when reading in the data is a bit 
+counterintuitive. If I want to read in the data shouldn't I point to the data 
+file?
 
 
-# Why do I point to the codebook to read in the data? (35)
-
-Here's my attempt to explain this in a hopefully memorable way: the data file 
-is the raw ingredients, and the codebook is the recipe. And when you go to make 
-dinner, your recipe tells you how to combine your ingredients to get the 
-finished product.
+# Why do I point to the codebook to read in the data? (33)
 
 
-# The data file is just raw ingredients (36)
 
-Looking at the first ten lines of our example data file, it makes sense why you 
-can't just tell R "read this data file into a data.frame". The data file itself
-doesn't contain any information about what the variables are called or which 
-numbers on each line correspond to which variables, let alone what the meaning 
-of those values might be.
+
+# NO HEADING (34)
+
+Because without the codebook, the data file is just a bunch of numbers. So 
+unless you are Keanu Reeves in the movie "The Matrix," you're going to have a 
+hard time making sense of it on its own.
+
+
+# NO HEADING (35)
+
+So that wasn't really an IPUMS data file on the last slide, but it wasn't too
+far off. Looking at the first ten lines of our example data file, it makes sense
+why you can't just tell R "read this data file into a data.frame". The data file
+itself doesn't contain any information about what the variables are called or
+which numbers on each line correspond to which variables, let alone what the
+meaning of those values might be.
 
 (In case you're wondering what those blanks are, that's a geography variable 
 that is not available in some years of our data.)
 
 
-# The DDI codebook is the recipe (37)
+# The DDI codebook: Decoding The Matrix (36)
 
-The DDI codebook tells you what to do with the ingredients in the data file. It
+The DDI codebook makes sense of those numbers in the data file. It
 contains a bunch of information about your extract, including the name of the
 data file, which is why you don't need to supply the path to the data file if
 you saved the codebook and data in the same folder.
 
-But perhaps the most important element for understanding and analyzing the data
-is the "var_info" element, so let's take a look at that.
+But perhaps the most important element for understanding and analyzing the
+data is the "var_info" element, so let's take a look at that.
 
 
-# The DDI codebook is the recipe (38)
+# The DDI codebook: Decoding The Matrix (37)
 
-As we can see here, var_info is just data.frame where each row has information 
+As we can see here, var_info is just a data.frame where each row has information 
 about one variable, including the variable name, label, description, and value 
 labels, as well as where the variable is located in the fixed-width file.
 
@@ -312,29 +309,31 @@ var_info data.frame, as long as you remember that to read in the data, you must
 point to the DDI codebook, not the data file.
 
 
-# Overview (39)
+# NO HEADING (38)
+
+So, here again is what the data file looks like without the codebook...
 
 
+# NO HEADING (39)
+
+...and here it is with the codebook. Much better.
 
 
-# What's in my extract again? (40)
+# Overview (40)
 
-So we've read in our data -- how do we go about exploring it?
 
-We could refer back to the description we wrote when creating the extract, 
-maybe that will be informative. Let's see (read extract description). Ooh, 
-that's not very helpful. I'm guessing this joke hits close to home for some of 
-you long-time IPUMS users.
 
 
 # What's in my extract again? (41)
+
+So we've read in our data -- how do we go about exploring it?
 
 [Read text on slides]
 
 
 # Available metadata (42)
 
-So you can see here that ipumsr provides function to extract information from 
+So you can see here that ipumsr provides functions to extract information from 
 the DDI object without the need to slice and dice that "var_info" data.frame I 
 showed before. Here we grab the label and description for the variable PHONE.
 
@@ -548,7 +547,7 @@ will link to below.
 
 # Overview (61)
 
-
+Kara hands back to Derek
 
 
 # Phone availability  (62)
@@ -667,18 +666,18 @@ but that support will be rolled out one collection at a time, to allow us to
 thoroughly test that the extract API is working as expected for each collection.
 
 IPUMS USA is the first collection that will be supported, and we are currently
-doing internal testing of the API for USA. We'll put out a call for beta testers
-before the end of this year, but feel free to reach out in the meantime if you
-want to be added to that list. We expect to open up the USA extract API to all
-IPUMS USA users in the first few months of next year, depending on what sort of
-issues arise during beta testing.
+doing beta testing of the API for USA. Email IPUMS support at ipums@umn.edu if
+you'd like to become a beta tester. We expect to open up the USA extract API to
+all IPUMS USA users by fall of this year, depending on what sort of issues arise
+during beta testing.
 
 Another important note is that there is already a public API for the IPUMS NHGIS
 collection, which offers access to tabular data from the US Census Bureau, as
 well as corresponding geographic boundaries. ipumsr does not yet include
 functions for interacting with the NHGIS API, but there is a guide to
 interacting with that API in R, which we'll share a link to at the end of these
-slides, and we plan to add that functionality to ipumsr sometime next year.
+slides, and we are working to add that functionality to ipumsr sometime this 
+year.
 
 
 # What can I do with the API? (76)
@@ -777,10 +776,7 @@ more variables to your previous extract, and you just want to resubmit that
 extract with a few additional variables.
 
 To do this with ipumsr functions, you first pull down the definition of your 
-most recent extract using the function `get_recent_extracts_info_list()`, which 
-can return information on up to 10 recent extracts. Here, we specify that we 
-only want one recent extract (the most recent one), but because this function 
-always returns a list, we also have to subset the first element.
+most recent extract using the function `get_last_extract_info()`.
 
 Alternatively, if we know the extract number of the extract we want to revise, 
 we can use `get_extract_info()` and specify a shorthand notation for USA 

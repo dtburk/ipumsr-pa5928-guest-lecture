@@ -1,7 +1,7 @@
 ---
 title: "Using IPUMS data in R with ipumsr"
 author: "Derek Burk, Dan Ehrlich, & Kara Fisher"
-date: "10/12/2021"
+date: "03/31/2022"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -123,6 +123,12 @@ options(width = 50)
   }
 </style>
 
+<style>
+.imgsrc {
+  font-size: 0.5em;
+}
+</style>
+
 # Who we are
 
 
@@ -223,27 +229,31 @@ You can always reach out to through our **github**, or via **user support**.
 
 --
 
-3. Reading data into R
+3. How to create a data extract
 
 --
 
-4. Exploring and manipulating metadata
+4. Reading data into R
 
 --
 
-5. Brief analysis example
+5. Exploring and manipulating metadata
 
 --
 
-6. Working with IPUMS geographic data
+6. Brief analysis example
 
 --
 
-7. Preview of IPUMS API functionality
+7. Working with IPUMS geographic data
 
 --
 
-8. Q & A
+8. Preview of IPUMS API functionality
+
+--
+
+9. Q & A
 
 ---
 
@@ -258,17 +268,19 @@ You can always reach out to through our **github**, or via **user support**.
 
 `2.` What is ipumsr, and why use it?
 
-`3.` Reading data into R
+`3.` How to create a data extract
 
-`4.` Exploring and manipulating metadata
+`4.` Reading data into R
 
-`5.` Brief analysis example
+`5.` Exploring and manipulating metadata
 
-`6.` Working with IPUMS geographic data
+`6.` Brief analysis example
 
-`7.` Preview of IPUMS API functionality
+`7.` Working with IPUMS geographic data
 
-`8.` Q & A
+`8.` Preview of IPUMS API functionality
+
+`9.` Q & A
 
 ]
 
@@ -310,12 +322,6 @@ ipums has grown substantially since its first beta release in 1993,
 started with **US census data** has grown to include 9 collections
 
 *mostly just segueing to projects*
-
----
-
-class: center, middle
-
-# Poll: Which IPUMS data collections have you used already?
 
 
 ---
@@ -366,8 +372,7 @@ class: center, middle
 - Labor Force surveys provide high resolution **microdata** about work conditions
 
   - Administered quarterly (usually) with records going back at least 10 years (usually)
-  - Currently available for Italy (2011-2020) & Spain (2005-2020)
-  - Mexico (2005-2020) coming soon!
+  - Currently available for Italy (2011-2020), Spain (2005-2020), and Mexico (2005-2020)
 
 - https://international.ipums.org/international/
 
@@ -463,13 +468,6 @@ Check out Matt Gunther's blog using IPUMS Global Health Data
 
 - https://ihgis.ipums.org/
 
-
----
-
-class: center, middle
-
-# Poll: Which IPUMS data collections are you most excited to use in the future ?
-
 ---
 
 # So what is IPUMS?
@@ -527,17 +525,19 @@ So ipums really is **data** and a whole lot of it. These 9 different projects in
 
 .strong[`2.` What is ipumsr, and why use it?]
 
-`3.` Reading data into R
+`3.` How to create a data extract
 
-`4.` Exploring and manipulating metadata
+`4.` Reading data into R
 
-`5.` Brief analysis example
+`5.` Exploring and manipulating metadata
 
-`6.` Working with IPUMS geographic data
+`6.` Brief analysis example
 
-`7.` Preview of IPUMS API functionality
+`7.` Working with IPUMS geographic data
 
-`8.` Q & A
+`8.` Preview of IPUMS API functionality
+
+`9.` Q & A
 
 ]
 
@@ -574,7 +574,7 @@ So ipums really is **data** and a whole lot of it. These 9 different projects in
 
 --
 
-- Over 90,000 CRAN downloads
+- Over 100,000 CRAN downloads
 
 --
 
@@ -683,14 +683,6 @@ There are other ways to read IPUMS data into R, but ipumsr is the fastest way
 to read the data in with attached metadata, such as variable and value labels.
 
 Relatively small example, so the time costs can grow with larger datasets.
----
-
-class: center, middle
-
-# Poll: Have you ever used ipumsr before?
-
-???
-If you've never used ipumsr before you may be asking *where can i download it*
 
 
 ---
@@ -704,19 +696,20 @@ install.packages("ipumsr")
 
 ### Or if you want the development version
 
-- www.github.com/mnpopcenter/ipumsr
+- www.github.com/ipums/ipumsr
 
 ```{r, eval = FALSE}
 if (!require(remotes)) install.packages("remotes")
-remotes::install_github("mnpopcenter/ipumsr", ref = "api-alpha-dev")
+remotes::install_github("ipums/ipumsr")
 ```
 
 ???
 
 More advanced users might be thinking, *"this stable release is boring"* in which case you can download the development version to test out the latest features. 
 
-The API functions are in the development version, but the API itself is not yet 
-publicly available.
+The API functions are in the development version. The API itself is not yet 
+publicly available, but email IPUMS support at ipums@umn.edu if you're 
+interested in becoming a beta tester.
 
 ---
 class: center, middle
@@ -794,24 +787,58 @@ These packages are used in some of the examples we will walk through.
 
 `2.` What is ipumsr, and why use it?
 
-.strong[`3.` Reading data into R]
+.strong[`3.` How to create a data extract]
 
-`4.` Exploring and manipulating metadata
+`4.` Reading data into R
 
-`5.` Brief analysis example
+`5.` Exploring and manipulating metadata
 
-`6.` Working with IPUMS geographic data
+`6.` Brief analysis example
 
-`7.` Preview of IPUMS API functionality
+`7.` Working with IPUMS geographic data
 
-`8.` Q & A
+`8.` Preview of IPUMS API functionality
+
+`9.` Q & A
+
+]
+
+???
+
+Dan passes to Derek. Derek switches to a web demo of extract system.
+
+---
+
+
+# Overview
+
+.greyed-out[
+
+
+`1.` What is IPUMS?
+
+`2.` What is ipumsr, and why use it?
+
+`3.` How to create a data extract
+
+.strong[`4.` Reading data into R]
+
+`5.` Exploring and manipulating metadata
+
+`6.` Brief analysis example
+
+`7.` Working with IPUMS geographic data
+
+`8.` Preview of IPUMS API functionality
+
+`9.` Q & A
 
 ]
 
 
 ???
 
-Dan passes to Kara/Derek
+Website demo ends, back to slides. Derek passes to Kara.
 
 ---
 
@@ -900,8 +927,9 @@ preserve the original metadata once you start messing around with the data.
 
 Notice that in both cases we are supplying the codebook (either already read in
 or as a file path), not the data file, to `read_ipums_micro()`. The fact that we
-don't point to the actual data file when reading in the data might confusing. If
-I want to read in the data shouldn't I point to the data file?
+don't point to the actual data file when reading in the data is a bit 
+counterintuitive. If I want to read in the data shouldn't I point to the data 
+file?
 
 ---
 
@@ -909,42 +937,49 @@ class: center middle
 
 # Why do I point to the codebook to read in the data?
 
---
-
-### The data file is the **raw ingredients**, the codebook is the **recipe**
-
-???
-Here's my attempt to explain this in a hopefully memorable way: the data file 
-is the raw ingredients, and the codebook is the recipe. And when you go to make 
-dinner, your recipe tells you how to combine your ingredients to get the 
-finished product.
-
-Note for future revisions of this section: Seems like we could add a visual or 
-two here (possibly from Allison Horst's collection of R illustrations), and/or 
-improve the analogy (would Lego set and instruction booklet be better?).
 
 ---
 
-# The data file is just raw ingredients
+class: center middle inverse
+
+```{r echo=FALSE, fig.alt="Columns of green symbols streaming down a black background"}
+knitr::include_graphics("images/matrix-code.gif")
+```
+
+.imgsrc[
+  Source: https://c.tenor.com/KBe_nw4IL2QAAAAC/matrix-code.gif
+]
+
+
+???
+Because without the codebook, the data file is just a bunch of numbers. So 
+unless you are Keanu Reeves in the movie "The Matrix," you're going to have a 
+hard time making sense of it on its own.
+
+---
+
+class: center middle
 
 ```{r echo=FALSE, comment = ''}
 readLines("usa_00013.dat.gz", n = 10) %>% 
   paste0(collapse = "\n") %>% 
   cat()
 ```
+
 ???
-Looking at the first ten lines of our example data file, it makes sense why you 
-can't just tell R "read this data file into a data.frame". The data file itself
-doesn't contain any information about what the variables are called or which 
-numbers on each line correspond to which variables, let alone what the meaning 
-of those values might be.
+So that wasn't really an IPUMS data file on the last slide, but it wasn't too
+far off. Looking at the first ten lines of our example data file, it makes sense
+why you can't just tell R "read this data file into a data.frame". The data file
+itself doesn't contain any information about what the variables are called or
+which numbers on each line correspond to which variables, let alone what the
+meaning of those values might be.
 
 (In case you're wondering what those blanks are, that's a geography variable 
 that is not available in some years of our data.)
 
 ---
 
-# The DDI codebook is the recipe
+# The DDI codebook: Decoding The Matrix
 
 ```{r, results='markup'}
 names(ddi)
@@ -956,17 +991,17 @@ ddi$file_name
 ```
 
 ???
-The DDI codebook tells you what to do with the ingredients in the data file. It
+The DDI codebook makes sense of those numbers in the data file. It
 contains a bunch of information about your extract, including the name of the
 data file, which is why you don't need to supply the path to the data file if
 you saved the codebook and data in the same folder.
 
-But perhaps the most important element for understanding and analyzing the data
-is the "var_info" element, so let's take a look at that.
+But perhaps the most important element for understanding and analyzing the
+data is the "var_info" element, so let's take a look at that.
 
 ---
 
-# The DDI codebook is the recipe
+# The DDI codebook: Decoding The Matrix
 
 ```{r echo=FALSE}
 old_width <- getOption("width")
@@ -983,13 +1018,43 @@ options(width = old_width)
 ```
 
 ???
-As we can see here, var_info is just data.frame where each row has information 
+As we can see here, var_info is just a data.frame where each row has information 
 about one variable, including the variable name, label, description, and value 
 labels, as well as where the variable is located in the fixed-width file.
 
 You don't need to remember the details of what's in the DDI object or this 
 var_info data.frame, as long as you remember that to read in the data, you must 
 point to the DDI codebook, not the data file.
+
+---
+
+class: center middle inverse
+
+```{r echo=FALSE, fig.alt="Columns of green symbols streaming down a black background"}
+knitr::include_graphics("images/matrix-code.gif")
+```
+
+.imgsrc[
+  Source: https://c.tenor.com/KBe_nw4IL2QAAAAC/matrix-code.gif
+]
+
+???
+So, here again is what the data file looks like without the codebook...
+
+---
+
+class: center middle inverse
+
+```{r echo=FALSE, fig.alt="Columns of green symbols streaming on a black background, forming the shape of three men standing at the other end of a hallway"}
+knitr::include_graphics("images/the-matrix-matrix.gif")
+```
+
+.imgsrc[
+  Source: https://c.tenor.com/uJ_GkLiWhcYAAAAC/the-matrix-matrix.gif
+]
+
+???
+...and here it is with the codebook. Much better.
 
 ---
 
@@ -1002,51 +1067,21 @@ point to the DDI codebook, not the data file.
 
 `2.` What is ipumsr, and why use it?
 
-`3.` Reading data into R
+`3.` How to create a data extract
 
-.strong[`4.` Exploring and manipulating metadata]
+`4.` Reading data into R
 
-`5.` Brief analysis example
+.strong[`5.` Exploring and manipulating metadata]
 
-`6.` Working with IPUMS geographic data
+`6.` Brief analysis example
 
-`7.` Preview of IPUMS API functionality
+`7.` Working with IPUMS geographic data
 
-`8.` Q & A
+`8.` Preview of IPUMS API functionality
+
+`9.` Q & A
 
 ]
-
----
-
-# What's in my extract again?
-
---
-
-Maybe I wrote an informative extract description?
-
-```{r include=FALSE}
-ddi$extract_notes <- 
-  paste0(
-    "User-provided description: Revision of(Revision of(Revision of(Revision ", 
-    "of(my extract))))"
-  )
-```
-
-```{r}
-ddi$extract_notes %>% strwrap(60)
-```
-
---
-
-No such luck 😞
-
-???
-So we've read in our data -- how do we go about exploring it?
-
-We could refer back to the description we wrote when creating the extract, 
-maybe that will be informative. Let's see (read extract description). Ooh, 
-that's not very helpful. I'm guessing this joke hits close to home for some of 
-you long-time IPUMS users.
 
 ---
 
@@ -1068,6 +1103,8 @@ But often variable names aren't self-explanatory.
 Let's leverage that attached metadata!
 
 ???
+So we've read in our data -- how do we go about exploring it?
+
 [Read text on slides]
 
 ---
@@ -1083,7 +1120,7 @@ ipums_var_desc(ddi, PHONE) %>% strwrap(60)
 ```
 
 ???
-So you can see here that ipumsr provides function to extract information from 
+So you can see here that ipumsr provides functions to extract information from 
 the DDI object without the need to slice and dice that "var_info" data.frame I 
 showed before. Here we grab the label and description for the variable PHONE.
 
@@ -1574,20 +1611,25 @@ will link to below.
 
 `2.` What is ipumsr, and why use it?
 
-`3.` Reading data into R
+`3.` How to create a data extract
 
-`4.` Exploring and manipulating metadata
+`4.` Reading data into R
 
-.strong[`5.` Brief analysis example]
+`5.` Exploring and manipulating metadata
 
-`6.` Working with IPUMS geographic data
+.strong[`6.` Brief analysis example]
 
-`7.` Preview of IPUMS API functionality
+`7.` Working with IPUMS geographic data
 
-`8.` Q & A
+`8.` Preview of IPUMS API functionality
+
+`9.` Q & A
 
 ]
 
+
+???
+Kara hands back to Derek
 
 ---
 
@@ -1690,17 +1732,19 @@ declined since 1960.
 
 `2.` What is ipumsr, and why use it?
 
-`3.` Reading data into R
+`3.` How to create a data extract
 
-`4.` Exploring and manipulating metadata
+`4.` Reading data into R
 
-`5.` Brief analysis example
+`5.` Exploring and manipulating metadata
 
-.strong[`6.` Working with IPUMS geographic data]
+`6.` Brief analysis example
 
-`7.` Preview of IPUMS API functionality
+.strong[`7.` Working with IPUMS geographic data]
 
-`8.` Q & A
+`8.` Preview of IPUMS API functionality
+
+`9.` Q & A
 
 ]
 
@@ -1859,17 +1903,19 @@ which we will link to below.
 
 `2.` What is ipumsr, and why use it?
 
-`3.` Reading data into R
+`3.` How to create a data extract
 
-`4.` Exploring and manipulating metadata
+`4.` Reading data into R
 
-`5.` Brief analysis example
+`5.` Exploring and manipulating metadata
 
-`6.` Working with IPUMS geographic data
+`6.` Brief analysis example
 
-.strong[`7.` Preview of IPUMS API functionality]
+`7.` Working with IPUMS geographic data
 
-`8.` Q & A
+.strong[`8.` Preview of IPUMS API functionality]
+
+`9.` Q & A
 
 ]
 
@@ -1878,11 +1924,11 @@ which we will link to below.
 
 # API Timeline
 
-- Currently in internal testing
+- Currently in beta testing for IPUMS USA
 
-- Beta testing before the end of 2021
+- IPUMS USA public launch expected mid-2022
 
-- IPUMS USA public launch early 2022
+- Interested in becoming a beta tester? Email ipums@umn.edu
 
 ???
 The API is not yet publicly available, but we wanted to offer a preview of the 
@@ -1893,18 +1939,18 @@ but that support will be rolled out one collection at a time, to allow us to
 thoroughly test that the extract API is working as expected for each collection.
 
 IPUMS USA is the first collection that will be supported, and we are currently
-doing internal testing of the API for USA. We'll put out a call for beta testers
-before the end of this year, but feel free to reach out in the meantime if you
-want to be added to that list. We expect to open up the USA extract API to all
-IPUMS USA users in the first few months of next year, depending on what sort of
-issues arise during beta testing.
+doing beta testing of the API for USA. Email IPUMS support at ipums@umn.edu if
+you'd like to become a beta tester. We expect to open up the USA extract API to
+all IPUMS USA users by fall of this year, depending on what sort of issues arise
+during beta testing.
 
 Another important note is that there is already a public API for the IPUMS NHGIS
 collection, which offers access to tabular data from the US Census Bureau, as
 well as corresponding geographic boundaries. ipumsr does not yet include
 functions for interacting with the NHGIS API, but there is a guide to
 interacting with that API in R, which we'll share a link to at the end of these
-slides, and we plan to add that functionality to ipumsr sometime next year.
+slides, and we are working to add that functionality to ipumsr sometime this 
+year.
 
 ---
 
@@ -2094,12 +2140,12 @@ also depend on how much traffic the extract system is getting.
 Get definition of my most recent extract:
 
 ```{r eval=FALSE}
-old_extract <- get_recent_extracts_info_list("usa", 1)[[1]]
+old_extract <- get_last_extract_info("usa")
 ```
 
 --
 
-Or if we know the number of the extract:
+Or if we know the number of the extract we want:
 
 ```{r eval=FALSE}
 old_extract <- get_extract_info("usa:33")
@@ -2113,10 +2159,7 @@ more variables to your previous extract, and you just want to resubmit that
 extract with a few additional variables.
 
 To do this with ipumsr functions, you first pull down the definition of your 
-most recent extract using the function `get_recent_extracts_info_list()`, which 
-can return information on up to 10 recent extracts. Here, we specify that we 
-only want one recent extract (the most recent one), but because this function 
-always returns a list, we also have to subset the first element.
+most recent extract using the function `get_last_extract_info()`.
 
 Alternatively, if we know the extract number of the extract we want to revise, 
 we can use `get_extract_info()` and specify a shorthand notation for USA 
@@ -2188,30 +2231,33 @@ students for a class assignment.
 
 `2.` What is ipumsr, and why use it?
 
-`3.` Reading data into R
+`3.` How to create a data extract
 
-`4.` Exploring and manipulating metadata
+`4.` Reading data into R
 
-`5.` Brief analysis example
+`5.` Exploring and manipulating metadata
 
-`6.` Working with IPUMS geographic 
+`6.` Brief analysis example
 
-`7.` Preview of IPUMS API functionality
+`7.` Working with IPUMS geographic data
 
-.strong[`8.` Q & A ]
+`8.` Preview of IPUMS API functionality
+
+.strong[`9.` Q & A ]
 
 ]
 
 ---
 
 # Resources
+
 - Email us: ipums+cran@umn.edu
 
 - Post on the IPUMS User Forum: https://forum.ipums.org/
 
-- Create an issue on GitHub: https://github.com/mnpopcenter/ipumsr
+- Create an issue on GitHub: https://github.com/ipums/ipumsr
 
-- This presentation: https://github.com/dtburk/ipumsr-webinar
+- This presentation: https://github.com/dtburk/ipumsr-pa5928-guest-lecture
 
 - ipumsr website, with vignettes: http://tech.popdata.org/ipumsr/index.html
 

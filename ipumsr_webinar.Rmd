@@ -170,9 +170,9 @@ Public Health
 ???
 (Name, pronouns, academic field, time with IPUMS)
 
-So, my name is Derek Burk, I use he/him pronouns, I've been working on the
-IPUMS International team for the past four years, and my academic training is in
-sociology.
+So, my name is Derek Burk, I use he/him pronouns, I've been working on the IPUMS
+International team for the past four and a half years, and my academic training
+is in sociology.
 
 
 ---
@@ -702,6 +702,20 @@ Initial API support will be for IPUMS USA, with more projects to follow soon.
 
 - One package for IPUMS microdata, aggregate data, and geography
 
+--
+
+- Specialized functions for viewing and manipulating IPUMS metadata
+
+--
+
+- Bundled how-to guides (vignettes)
+
+--
+
+- Potential to add more features (e.g. API support); let us know what you want!
+  - File an issue at https://github.com/mnpopcenter/ipumsr/issues
+  - Email ipums+cran@umn.edu
+
 ???
 
 Regarding "One package": Without ipumsr, you'd need to use a variety of
@@ -716,6 +730,11 @@ package with a consistent interface for working with all these different types
 of IPUMS data.
 
 *a one stop shop that makes it easy to work with ipums data*
+
+Regarding "More features": The aforementioned IPUMS API support will be the next
+big feature. Another potential new feature is adding tools for properly handling
+survey weights. Let us know what would be helpful to you via GitHub or email.
+
 ---
 
 class: center middle inverse
@@ -732,28 +751,6 @@ background-size: cover
 knitr::include_graphics("images/transparent_blank.png")
 ```
 
----
-
-# Why use ipumsr?
-
-- One package for IPUMS microdata, aggregate data, and geography
-
-- Specialized functions for viewing and manipulating IPUMS metadata
-
---
-
-- Bundled how-to guides (vignettes)
-
---
-
-- Potential to add more features (e.g. API support); let us know what you want!
-  - File an issue at https://github.com/mnpopcenter/ipumsr/issues
-  - Email ipums+cran@umn.edu
-
-???
-Regarding "More features": The aforementioned IPUMS API support will be the next
-big feature. Another potential new feature is adding tools for properly handling
-survey weights. Let us know what would be helpful to you via GitHub or email.
 
 ---
 
@@ -818,7 +815,7 @@ interested in becoming a beta tester.
 ---
 class: center, middle
 
-# To run the code in this webinar
+# To run the code in this presentation
 
 ???
 
@@ -2141,7 +2138,7 @@ these capabilities once the core functionality is well-tested and stable.
 # Pipe-friendly example
 
 ```{r eval=FALSE}
-my_extract <- define_extract(
+my_extract <- define_extract_micro(
   "usa", 
   "Occupation by sex and age",
   c("us2017a", "us2018a"), 
@@ -2166,7 +2163,7 @@ Now let's get to some example code! We'll start with a brief example that shows
 a typical API workflow using the "pipe" operator from the magrittr package, 
 which is often used in conjunction with tidyverse packages such as dplyr.
 
-We start by defining an extract object using the `define_extract()` function, 
+We start by defining an extract object using the `define_extract_micro()` function, 
 and specifying 
 
 - a data collection -- in this case, "usa" 
@@ -2319,10 +2316,6 @@ client tools in the "ipumspy" module.
 
 If you are using ipumsr, the `define_extract_from_json()` function will create
 an extract object from a JSON-formatted definition shared by someone else.
-
-As Dan pointed out as we were preparing this webinar, this functionality could 
-also be useful for instructors who want to share an extract definition with 
-students for a class assignment.
 
 ---
 

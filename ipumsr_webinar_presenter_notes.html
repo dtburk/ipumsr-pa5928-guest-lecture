@@ -368,36 +368,34 @@ pre code {
 
 <div id="no-heading-1" class="section level1">
 <h1>NO HEADING (1)</h1>
-<p>Welcome, everyone, to this webinar on using IPUMS data in R with
-ipumsr. We only have an hour, and we want to leave time for questions at
-the end, so this will be a whirlwind tour of some of the key features of
-ipumsr.</p>
+<p>Hello everyone, and thanks for having us, we’re excited to join you
+today to talk about using IPUMS data in R with ipumsr. We want to leave
+time for questions at the end, so this will be a whirlwind tour of some
+of the key features of ipumsr.</p>
 <p>Our goal is to get you excited about analyzing IPUMS data using
 ipumsr, and point you to additional resources to explore on your own. As
 you use ipumsr, you are bound to have questions, and at the end we will
 provide links to several places where you can seek help, including by
 reaching out to our excellent IPUMS user support team or posting a
 question on the IPUMS user forum.</p>
-<p>We will also share with you the webinar recording, these slides, and
-all of the code used to build this presentation, so there’s no need to
-frantically jot down notes during the webinar itself. You should,
-however, type any questions in the Q&amp;A as they occur to you, and our
-user support expert Grace will either answer them or add them to the
-list to be answered at the end.</p>
+<p>I believe your instructor has already shared a PDF version of these
+slides with you, and you will have access to a recording of this
+presentation, as well as the code used to build this presentation. I’m
+not sure how we’re handling questions, but perhaps your instructor can
+interrupt us if there is a question before the Q&amp;A period at the end
+of the presentation.</p>
 <p>Finally, I just want to acknowledge that the ipumsr package was
 created by Greg Freedman Ellis, and this webinar is based on a
 presentation created by Greg, so thanks to Greg for creating a great
 package, and for letting us use your slides.</p>
-<p>With that, we’ll get started by briefly introducing ourselves. You’ll
-primarily be hearing from me and Dan, but the development of the webinar
-was a collaborative effort between Dan, Kara, and myself.</p>
+<p>With that, we’ll get started by briefly introducing ourselves.</p>
 </div>
 <div id="who-we-are-2" class="section level1">
 <h1>Who we are (2)</h1>
 <p>(Name, pronouns, academic field, time with IPUMS)</p>
 <p>So, my name is Derek Burk, I use he/him pronouns, I’ve been working
-on the IPUMS International team for the past four years, and my academic
-training is in sociology.</p>
+on the IPUMS International team for the past four and a half years, and
+my academic training is in sociology.</p>
 </div>
 <div id="who-we-are-3" class="section level1">
 <h1>Who we are (3)</h1>
@@ -420,7 +418,6 @@ via <strong>user support</strong>.</p>
 1993,</p>
 <p>started with <strong>US census data</strong> has grown to include 9
 collections</p>
-<p><em>mostly just segueing to projects</em></p>
 </div>
 <div id="no-heading-7" class="section level1">
 <h1>NO HEADING (7)</h1>
@@ -433,10 +430,11 @@ collections</p>
 </div>
 <div id="no-heading-10" class="section level1">
 <h1>NO HEADING (10)</h1>
-<p>Check out Matt Gunther’s blog using IPUMS Global Health Data</p>
 </div>
 <div id="no-heading-11" class="section level1">
 <h1>NO HEADING (11)</h1>
+<p>Looked at relationship between degrees of hearing impairment and
+mortality rates.</p>
 </div>
 <div id="no-heading-12" class="section level1">
 <h1>NO HEADING (12)</h1>
@@ -450,29 +448,48 @@ collections</p>
 <div id="no-heading-15" class="section level1">
 <h1>NO HEADING (15)</h1>
 </div>
-<div id="so-what-is-ipums-16" class="section level1">
-<h1>So what is IPUMS? (16)</h1>
+<div id="no-heading-16" class="section level1">
+<h1>NO HEADING (16)</h1>
+</div>
+<div id="no-heading-17" class="section level1">
+<h1>NO HEADING (17)</h1>
+</div>
+<div id="no-heading-18" class="section level1">
+<h1>NO HEADING (18)</h1>
+</div>
+<div id="no-heading-19" class="section level1">
+<h1>NO HEADING (19)</h1>
+</div>
+<div id="no-heading-20" class="section level1">
+<h1>NO HEADING (20)</h1>
+</div>
+<div id="no-heading-21" class="section level1">
+<h1>NO HEADING (21)</h1>
+<p>Check out blog using IPUMS Global Health Data</p>
+</div>
+<div id="so-what-is-ipums-22" class="section level1">
+<h1>So what is IPUMS? (22)</h1>
 <p>So ipums really is <strong>data</strong> and a whole lot of it. These
 9 different projects interact with different types of data and at
 different scales but they are united in the use of metadata that helps
 contextualize the data</p>
 <p><em>So I know you’re asking yourselves..</em></p>
 </div>
-<div id="so-what-is-ipums-17" class="section level1">
-<h1>So what is IPUMS? (17)</h1>
+<div id="so-what-is-ipums-23" class="section level1">
+<h1>So what is IPUMS? (23)</h1>
 </div>
-<div id="overview-18" class="section level1">
-<h1>Overview (18)</h1>
+<div id="overview-24" class="section level1">
+<h1>Overview (24)</h1>
 </div>
-<div id="what-is-ipumsr-19" class="section level1">
-<h1>What is ipumsr? (19)</h1>
+<div id="what-is-ipumsr-25" class="section level1">
+<h1>What is ipumsr? (25)</h1>
 <p>(Metadata such as value labels, variable labels, and detailed
 variable descriptions.)</p>
 <p>Initial API support will be for IPUMS USA, with more projects to
 follow soon.</p>
 </div>
-<div id="why-use-ipumsr-20" class="section level1">
-<h1>Why use ipumsr? (20)</h1>
+<div id="why-use-ipumsr-26" class="section level1">
+<h1>Why use ipumsr? (26)</h1>
 <p>Regarding “One package”: Without ipumsr, you’d need to use a variety
 of different approaches from different packages to read in and explore
 IPUMS</p>
@@ -484,27 +501,24 @@ consistent interface for working with all these different types of IPUMS
 data.</p>
 <p><em>a one stop shop that makes it easy to work with ipums
 data</em></p>
-</div>
-<div id="one-package-to-rule-them-all-21" class="section level1">
-<h1>One package to rule them all (21)</h1>
-</div>
-<div id="why-use-ipumsr-22" class="section level1">
-<h1>Why use ipumsr? (22)</h1>
 <p>Regarding “More features”: The aforementioned IPUMS API support will
 be the next big feature. Another potential new feature is adding tools
 for properly handling survey weights. Let us know what would be helpful
 to you via GitHub or email.</p>
 </div>
-<div id="why-use-ipumsr-23" class="section level1">
-<h1>Why use ipumsr? (23)</h1>
+<div id="one-package-to-rule-them-all-27" class="section level1">
+<h1>One package to rule them all (27)</h1>
+</div>
+<div id="why-use-ipumsr-28" class="section level1">
+<h1>Why use ipumsr? (28)</h1>
 <p>There are other ways to read IPUMS data into R, but ipumsr is the
 fastest way to read the data in with attached metadata, such as variable
 and value labels.</p>
 <p>Relatively small example, so the time costs can grow with larger
 datasets.</p>
 </div>
-<div id="installing-ipumsr-24" class="section level1">
-<h1>Installing ipumsr (24)</h1>
+<div id="installing-ipumsr-29" class="section level1">
+<h1>Installing ipumsr (29)</h1>
 <p>More advanced users might be thinking, <em>“this stable release is
 boring”</em> in which case you can download the development version to
 test out the latest features.</p>
@@ -512,36 +526,36 @@ test out the latest features.</p>
 not yet publicly available, but email IPUMS support at <a href="mailto:ipums@umn.edu" class="email">ipums@umn.edu</a> if you’re
 interested in becoming a beta tester.</p>
 </div>
-<div id="to-run-the-code-in-this-webinar-25" class="section level1">
-<h1>To run the code in this webinar (25)</h1>
+<div id="to-run-the-code-in-this-webinar-30" class="section level1">
+<h1>To run the code in this webinar (30)</h1>
 <p>Repeat: slides/recording will be available. To run this code yourself
 you can clone/download the repo from our github. This provides the data
 extracts you’ll need.</p>
 <p>However, you may need to install some additional packages used in the
 example code below, as shown on the next slide.</p>
 </div>
-<div id="install-r-packages-as-needed-26" class="section level1">
-<h1>Install R packages (as needed) (26)</h1>
+<div id="install-r-packages-as-needed-31" class="section level1">
+<h1>Install R packages (as needed) (31)</h1>
 <p>reminder, installing packages only needs to happen once, but some
 packages do update frequently so it can be a good idea to re-install
 once in a while</p>
 </div>
-<div id="loading-packages-27" class="section level1">
-<h1>Loading packages (27)</h1>
+<div id="loading-packages-32" class="section level1">
+<h1>Loading packages (32)</h1>
 <p>These packages are used in some of the examples we will walk
 through.</p>
 </div>
-<div id="overview-28" class="section level1">
-<h1>Overview (28)</h1>
+<div id="overview-33" class="section level1">
+<h1>Overview (33)</h1>
 <p>Dan passes to Derek. Derek switches to a web demo of extract
 system.</p>
 </div>
-<div id="overview-29" class="section level1">
-<h1>Overview (29)</h1>
+<div id="overview-34" class="section level1">
+<h1>Overview (34)</h1>
 <p>Website demo ends, back to slides. Derek passes to Kara.</p>
 </div>
-<div id="downloading-your-data-extract-30" class="section level1">
-<h1>Downloading your data extract (30)</h1>
+<div id="downloading-your-data-extract-35" class="section level1">
+<h1>Downloading your data extract (35)</h1>
 <p>Kind of confusing how to save the DDI/.xml file. THIS IS HOW. DDI is
 EXTREMELY important, as it contains all the instructions regarding the
 METADATA</p>
@@ -558,16 +572,16 @@ Initiative” – the DDI project sets standards for documenting datasets,
 and the codebooks for most IPUMS projects follow this standard.</p>
 <p>Make sure to save the data and DDI files in the same location.</p>
 </div>
-<div id="downloading-your-data-extract-31" class="section level1">
-<h1>Downloading your data extract (31)</h1>
+<div id="downloading-your-data-extract-36" class="section level1">
+<h1>Downloading your data extract (36)</h1>
 <p>The links under “Command Files” contain program-specific code for
 reading in the data. The R one contains the code we’ll show on the next
 slide.</p>
 <p>This helper code checks that you have ipumsr installed, and if you
 do, it reads in the DDI codebook and data into separate objects.</p>
 </div>
-<div id="read-in-the-data-32" class="section level1">
-<h1>Read in the data (32)</h1>
+<div id="read-in-the-data-37" class="section level1">
+<h1>Read in the data (37)</h1>
 <p>So you’ve downloaded both the data and the DDI codebook, and saved
 them in the same folder. Here’s how you actually read the data into
 R.</p>
@@ -586,17 +600,17 @@ already read in or as a file path), not the data file, to
 actual data file when reading in the data is a bit counterintuitive. If
 I want to read in the data shouldn’t I point to the data file?</p>
 </div>
-<div id="why-do-i-point-to-the-codebook-to-read-in-the-data-33" class="section level1">
-<h1>Why do I point to the codebook to read in the data? (33)</h1>
+<div id="why-do-i-point-to-the-codebook-to-read-in-the-data-38" class="section level1">
+<h1>Why do I point to the codebook to read in the data? (38)</h1>
 </div>
-<div id="no-heading-34" class="section level1">
-<h1>NO HEADING (34)</h1>
+<div id="no-heading-39" class="section level1">
+<h1>NO HEADING (39)</h1>
 <p>Because without the codebook, the data file is just a bunch of
 numbers. So unless you are Keanu Reeves in the movie “The Matrix,”
 you’re going to have a hard time making sense of it on its own.</p>
 </div>
-<div id="no-heading-35" class="section level1">
-<h1>NO HEADING (35)</h1>
+<div id="no-heading-40" class="section level1">
+<h1>NO HEADING (40)</h1>
 <p>So that wasn’t really an IPUMS data file on the last slide, but it
 wasn’t too far off. Looking at the first ten lines of our example data
 file, it makes sense why you can’t just tell R “read this data file into
@@ -607,8 +621,8 @@ values might be.</p>
 <p>(In case you’re wondering what those blanks are, that’s a geography
 variable that is not available in some years of our data.)</p>
 </div>
-<div id="the-ddi-codebook-decoding-the-matrix-36" class="section level1">
-<h1>The DDI codebook: Decoding The Matrix (36)</h1>
+<div id="the-ddi-codebook-decoding-the-matrix-41" class="section level1">
+<h1>The DDI codebook: Decoding The Matrix (41)</h1>
 <p>The DDI codebook makes sense of those numbers in the data file. It
 contains a bunch of information about your extract, including the name
 of the data file, which is why you don’t need to supply the path to the
@@ -617,8 +631,8 @@ data file if you saved the codebook and data in the same folder.</p>
 analyzing the data is the “var_info” element, so let’s take a look at
 that.</p>
 </div>
-<div id="the-ddi-codebook-decoding-the-matrix-37" class="section level1">
-<h1>The DDI codebook: Decoding The Matrix (37)</h1>
+<div id="the-ddi-codebook-decoding-the-matrix-42" class="section level1">
+<h1>The DDI codebook: Decoding The Matrix (42)</h1>
 <p>As we can see here, var_info is just a data.frame where each row has
 information about one variable, including the variable name, label,
 description, and value labels, as well as where the variable is located
@@ -627,44 +641,44 @@ in the fixed-width file.</p>
 this var_info data.frame, as long as you remember that to read in the
 data, you must point to the DDI codebook, not the data file.</p>
 </div>
-<div id="no-heading-38" class="section level1">
-<h1>NO HEADING (38)</h1>
+<div id="no-heading-43" class="section level1">
+<h1>NO HEADING (43)</h1>
 <p>So, here again is what the data file looks like without the
 codebook…</p>
 </div>
-<div id="no-heading-39" class="section level1">
-<h1>NO HEADING (39)</h1>
+<div id="no-heading-44" class="section level1">
+<h1>NO HEADING (44)</h1>
 <p>…and here it is with the codebook. Much better.</p>
 </div>
-<div id="overview-40" class="section level1">
-<h1>Overview (40)</h1>
+<div id="overview-45" class="section level1">
+<h1>Overview (45)</h1>
 </div>
-<div id="whats-in-my-extract-again-41" class="section level1">
-<h1>What’s in my extract again? (41)</h1>
+<div id="whats-in-my-extract-again-46" class="section level1">
+<h1>What’s in my extract again? (46)</h1>
 <p>So we’ve read in our data – how do we go about exploring it?</p>
 <p>[Read text on slides]</p>
 </div>
-<div id="available-metadata-42" class="section level1">
-<h1>Available metadata (42)</h1>
+<div id="available-metadata-47" class="section level1">
+<h1>Available metadata (47)</h1>
 <p>So you can see here that ipumsr provides functions to extract
 information from the DDI object without the need to slice and dice that
 “var_info” data.frame I showed before. Here we grab the label and
 description for the variable PHONE.</p>
 </div>
-<div id="available-metadata-43" class="section level1">
-<h1>Available metadata (43)</h1>
+<div id="available-metadata-48" class="section level1">
+<h1>Available metadata (48)</h1>
 <p>Similarly, we can print the value labels by pointing to the DDI. We
 see here that the variable PHONE takes four values: no, yes, not
 applicable, and suppressed.</p>
 </div>
-<div id="an-interactive-view-of-metadata-44" class="section level1">
-<h1>An interactive view of metadata (44)</h1>
+<div id="an-interactive-view-of-metadata-49" class="section level1">
+<h1>An interactive view of metadata (49)</h1>
 <p>For a more browsable view of the metadata, the ipums_view() function
 makes a nicely-formatted static html page that allows you to browse the
 metadata associated with your data extract.</p>
 </div>
-<div id="wrangling-value-labels-45" class="section level1">
-<h1>Wrangling value labels (45)</h1>
+<div id="wrangling-value-labels-50" class="section level1">
+<h1>Wrangling value labels (50)</h1>
 <p>IPUMS value labels don’t translate perfectly to R factors. The most
 important difference is that in a factor, values always count up from 1.
 In IPUMS variables, the values themselves often encode meaningful
@@ -680,8 +694,8 @@ or a regular numeric or character vector.</p>
 from both the value and label to transform your variables into the shape
 you want.</p>
 </div>
-<div id="havenlabelled-columns-at-a-glance-46" class="section level1">
-<h1>haven::labelled columns at a glance (46)</h1>
+<div id="havenlabelled-columns-at-a-glance-51" class="section level1">
+<h1>haven::labelled columns at a glance (51)</h1>
 <p>Here’s what the data look like when you read them in.</p>
 <p>One thing I like about the behavior of <code>haven::labelled()</code>
 objects is how they show the value and the label when you print your
@@ -691,14 +705,14 @@ haven::labelled objects, and you want to get rid of them in one fell
 swipe. I would advise against this approach in general, but it could be
 what you want in some cases.</p>
 </div>
-<div id="get-rid-of-havenlabelled-columns-47" class="section level1">
-<h1>Get rid of haven::labelled columns (47)</h1>
+<div id="get-rid-of-havenlabelled-columns-52" class="section level1">
+<h1>Get rid of haven::labelled columns (52)</h1>
 <p>One option is the <code>as_factor()</code> function, which can be
 applied to the whole data frame at once. Here we see that the values
 have been stripped away, leaving only the labels as factor levels.</p>
 </div>
-<div id="get-rid-of-havenlabelled-columns-48" class="section level1">
-<h1>Get rid of haven::labelled columns (48)</h1>
+<div id="get-rid-of-havenlabelled-columns-53" class="section level1">
+<h1>Get rid of haven::labelled columns (53)</h1>
 <p>Alternatively, if you just want the numeric values, you can use
 <code>zap_labels()</code> on the whole data frame. Here we see that the
 labels have been stripped away, leaving only the numeric codes.</p>
@@ -716,11 +730,11 @@ transition away from getting rid of labelled columns to using them with
 ipumsr. Would maybe help to distinguish which functions (ours) we are
 suggesting to use. </em></strong></p>
 </div>
-<div id="using-ipumsr-label-helper-functions-49" class="section level1">
-<h1>Using ipumsr label helper functions (49)</h1>
+<div id="using-ipumsr-label-helper-functions-54" class="section level1">
+<h1>Using ipumsr label helper functions (54)</h1>
 </div>
-<div id="lbl_na_if-50" class="section level1">
-<h1><code>lbl_na_if()</code> (50)</h1>
+<div id="lbl_na_if-55" class="section level1">
+<h1><code>lbl_na_if()</code> (55)</h1>
 <p>The first label helper function is label NA if, which allows you to
 set values to NA, which is R’s code for missing values, according to
 either the value or the label.</p>
@@ -730,8 +744,8 @@ if PHONE is still a haven::labelled column.</p>
 <p>In this case, given the value labels we see here, it makes sense to
 set values 0 and 8 to missing.</p>
 </div>
-<div id="lbl_na_if-51" class="section level1">
-<h1><code>lbl_na_if()</code> (51)</h1>
+<div id="lbl_na_if-56" class="section level1">
+<h1><code>lbl_na_if()</code> (56)</h1>
 <p><code>lbl_na_if()</code> supports a special syntax used by a few of
 ipumsr’s label functions that allows you to use anonymous functions
 (signaled by the “tilde” symbol, which is that little squiggly line)
@@ -746,30 +760,30 @@ transformed version, so that we don’t overwrite the original. This can
 be useful so that you can engage in some trial and error until you get
 the variable transformed as you want it.</p>
 </div>
-<div id="lbl_na_if-52" class="section level1">
-<h1><code>lbl_na_if()</code> (52)</h1>
+<div id="lbl_na_if-57" class="section level1">
+<h1><code>lbl_na_if()</code> (57)</h1>
 <p>In case you’re unfamiliar with the anonymous function notation, that
 squiggly tilde could be replaced with a regular function definition, as
 shown here. So anytime you see the tilde symbol in any of these label
 helper functions, you can read it as “a function of dot val and dot
 label”.</p>
 </div>
-<div id="lbl_na_if-53" class="section level1">
-<h1><code>lbl_na_if()</code> (53)</h1>
+<div id="lbl_na_if-58" class="section level1">
+<h1><code>lbl_na_if()</code> (58)</h1>
 <p>Because lbl_na_if works with both values and labels, we could
 accomplish the same thing by referring to the labels. This time, we
 specify that PHONE3 should be set to missing if the original label was
 “N/A” or “Suppressed”.</p>
 </div>
-<div id="lbl_collapse-54" class="section level1">
-<h1><code>lbl_collapse()</code> (54)</h1>
+<div id="lbl_collapse-59" class="section level1">
+<h1><code>lbl_collapse()</code> (59)</h1>
 <p>[Read bullet point]</p>
 <p>We see here that values less than 10 indicate missing or no schooling
 values; values between 10 and 19 all capture levels between nursery
 school and grade 4; and so on.</p>
 </div>
-<div id="lbl_collapse-55" class="section level1">
-<h1><code>lbl_collapse()</code> (55)</h1>
+<div id="lbl_collapse-60" class="section level1">
+<h1><code>lbl_collapse()</code> (60)</h1>
 <p>[Read bullet point] The label collapse function allows you to
 collapse values based on a hierarchical coding scheme.</p>
 <p>Here we use the integer division operator “percent forward slash
@@ -783,15 +797,15 @@ value. I think the details of what’s going on here take a bit of time to
 unpack, but hopefully this gives you a sense of the usefulness and power
 of this function.</p>
 </div>
-<div id="still-too-detailed-for-a-graph-56" class="section level1">
-<h1>Still too detailed for a graph (56)</h1>
+<div id="still-too-detailed-for-a-graph-61" class="section level1">
+<h1>Still too detailed for a graph (61)</h1>
 <p>This shows the values and labels that we get by applying
 lbl_collapse() to collapse the last digit. However, if we want to
 visualize educational differences, as we’ll do below, this might still
 be too much detail.</p>
 </div>
-<div id="lbl_relabel-57" class="section level1">
-<h1><code>lbl_relabel()</code> (57)</h1>
+<div id="lbl_relabel-62" class="section level1">
+<h1><code>lbl_relabel()</code> (62)</h1>
 <p>That’s where <code>lbl_relabel()</code> comes in.</p>
 <p>Label relabel offers the most power and flexibility by allowing you
 to create an arbitrary number of new labeled values, controlling both
@@ -810,31 +824,31 @@ l-b-l (or “label”) helper function. So the first line can be read as
 “assign a value of two with a label of”Less than High School” when the
 input value is greater than 0 and less than 6”.</p>
 </div>
-<div id="lbl_relabel-58" class="section level1">
-<h1><code>lbl_relabel()</code> (58)</h1>
+<div id="lbl_relabel-63" class="section level1">
+<h1><code>lbl_relabel()</code> (63)</h1>
 <p>Notice that we have examples of using the dot val variable on the
 first and fourth lines…</p>
 </div>
-<div id="lbl_relabel-59" class="section level1">
-<h1><code>lbl_relabel()</code> (59)</h1>
+<div id="lbl_relabel-64" class="section level1">
+<h1><code>lbl_relabel()</code> (64)</h1>
 <p>…and of using the dot label variable on the second and third lines.
 The third line of the lbl_relabel() call can be read as “assign a value
 of 4 with a label of”Some college” when the input label matches our
 “college_regex” regular expression.</p>
 </div>
-<div id="lbl_relabel-60" class="section level1">
-<h1><code>lbl_relabel()</code> (60)</h1>
+<div id="lbl_relabel-65" class="section level1">
+<h1><code>lbl_relabel()</code> (65)</h1>
 <p>So, now we have a education variable with fewer categories, which is
 more suitable for visualization.</p>
 <p>For more on these helper functions, see the “Value labels” vignette,
 which we will link to below.</p>
 </div>
-<div id="overview-61" class="section level1">
-<h1>Overview (61)</h1>
+<div id="overview-66" class="section level1">
+<h1>Overview (66)</h1>
 <p>Kara hands back to Derek</p>
 </div>
-<div id="phone-availability-62" class="section level1">
-<h1>Phone availability (62)</h1>
+<div id="phone-availability-67" class="section level1">
+<h1>Phone availability (67)</h1>
 <p>Microdata often needs to be summarized at a higher level for
 visualization. In this case, if we want to make a graph of phone
 availability over time, we need to first summarize at the year
@@ -844,13 +858,13 @@ with access to a phone in each year. Once our data are summarized so
 that each row represents a value for one year, we can make a graph by
 year.</p>
 </div>
-<div id="phone-availability-63" class="section level1">
-<h1>Phone availability (63)</h1>
+<div id="phone-availability-68" class="section level1">
+<h1>Phone availability (68)</h1>
 <p>Here we see a strange decline, then resurgence, in access to a phone
 line. What’s going on here?</p>
 </div>
-<div id="interpretation-64" class="section level1">
-<h1>Interpretation (64)</h1>
+<div id="interpretation-69" class="section level1">
+<h1>Interpretation (69)</h1>
 <p>If we look at the Comparability tab for the PHONE variable on the
 IPUMS USA website, we find an explanation:</p>
 <p>The 2008 ACS and 2008 PRCS instructed respondents to include cell
@@ -858,22 +872,22 @@ phone service; prior to 2008, this was not made explicit.</p>
 <p>Just one small example of the value added to these data by the IPUMS
 USA team.</p>
 </div>
-<div id="phone-availability-by-education-65" class="section level1">
-<h1>Phone availability by education (65)</h1>
+<div id="phone-availability-by-education-70" class="section level1">
+<h1>Phone availability by education (70)</h1>
 <p>With our simplified education variable, we can also plot access to a
 phone line by education. Here we see that anomalous drop and resurgence
 is present at all education levels, and that differences in phone access
 by education have declined since 1960.</p>
 </div>
-<div id="overview-66" class="section level1">
-<h1>Overview (66)</h1>
+<div id="overview-71" class="section level1">
+<h1>Overview (71)</h1>
 </div>
-<div id="getting-geographic-data-67" class="section level1">
-<h1>Getting geographic data (67)</h1>
+<div id="getting-geographic-data-72" class="section level1">
+<h1>Getting geographic data (72)</h1>
 <p>[Read bullet points]</p>
 </div>
-<div id="getting-geographic-data-68" class="section level1">
-<h1>Getting geographic data (68)</h1>
+<div id="getting-geographic-data-73" class="section level1">
+<h1>Getting geographic data (73)</h1>
 <p>Geographic boundary data is usually found via a “Geography and GIS”
 link on the left sidebar of the home page for a data collection, under
 the heading “Supplemental Data”.</p>
@@ -881,8 +895,8 @@ the heading “Supplemental Data”.</p>
 the ones you want in a zip archive, and unzip the contents of the
 archive into their own folder within your project directory.</p>
 </div>
-<div id="loading-shape-data-69" class="section level1">
-<h1>Loading shape data (69)</h1>
+<div id="loading-shape-data-74" class="section level1">
+<h1>Loading shape data (74)</h1>
 <p>The sp package (short for “spatial”) has been around since 2005. It
 is more established and some other R spatial packages might still assume
 you are using sp data structures. The sf package (short for “simple
@@ -892,14 +906,14 @@ for some use cases.</p>
 book <em>Geocomputation with R</em>, which we link to at the end of the
 slides.</p>
 </div>
-<div id="loading-shape-data-70" class="section level1">
-<h1>Loading shape data (70)</h1>
+<div id="loading-shape-data-75" class="section level1">
+<h1>Loading shape data (75)</h1>
 <p>At the risk of oversimplifying, an sf object is basically a tibble or
 data.frame with a special geometry column. That simplification helps me
 understand the process of joining the sf object to data.</p>
 </div>
-<div id="joining-shape-data-71" class="section level1">
-<h1>Joining shape data (71)</h1>
+<div id="joining-shape-data-76" class="section level1">
+<h1>Joining shape data (76)</h1>
 <p>Before joining to shape data, we need to summarize our person level
 data at the level of the geography we are joining to. Thus, the first
 block of code computes the weighted proportion of persons with access to
@@ -907,11 +921,11 @@ a phone for each CONSPUMA unit in each year. Once our data are
 summarized so that each row represents a value for one CONSPUMA unit in
 one year, we can join to the sf object we loaded above.</p>
 </div>
-<div id="plotting-shape-data-72" class="section level1">
-<h1>Plotting shape data (72)</h1>
+<div id="plotting-shape-data-77" class="section level1">
+<h1>Plotting shape data (77)</h1>
 </div>
-<div id="plotting-shape-data-73" class="section level1">
-<h1>Plotting shape data (73)</h1>
+<div id="plotting-shape-data-78" class="section level1">
+<h1>Plotting shape data (78)</h1>
 <p>As with phone access by education, these maps show evidence of
 declining geographic variation in access to a phone line.</p>
 <p>For more information on IPUMS geographic data, see the ipumsr
@@ -919,11 +933,11 @@ vignette on working with geographic data, or one of several
 collection-specific recorded webinars and tutorials on that topic, which
 can be found on the tutorials page which we will link to below.</p>
 </div>
-<div id="overview-74" class="section level1">
-<h1>Overview (74)</h1>
+<div id="overview-79" class="section level1">
+<h1>Overview (79)</h1>
 </div>
-<div id="api-timeline-75" class="section level1">
-<h1>API Timeline (75)</h1>
+<div id="api-timeline-80" class="section level1">
+<h1>API Timeline (80)</h1>
 <p>The API is not yet publicly available, but we wanted to offer a
 preview of the functionality that will soon be available in ipumsr.</p>
 <p>We plan to support creating extracts via API for all of our data
@@ -944,8 +958,8 @@ there is a guide to interacting with that API in R, which we’ll share a
 link to at the end of these slides, and we are working to add that
 functionality to ipumsr sometime this year.</p>
 </div>
-<div id="what-can-i-do-with-the-api-76" class="section level1">
-<h1>What can I do with the API? (76)</h1>
+<div id="what-can-i-do-with-the-api-81" class="section level1">
+<h1>What can I do with the API? (81)</h1>
 <p>So, your next question might be, “what will I be able to do with this
 API?” Here’s the high-level overview:</p>
 <p>You’ll be able to:</p>
@@ -966,8 +980,8 @@ purpose tool like curl, and IPUMS is developing API client tools for
 Python in parallel with the R client tools that will be part of the
 ipumsr package.</p>
 </div>
-<div id="what-cant-i-do-with-the-api-77" class="section level1">
-<h1>What can’t I do with the API? (77)</h1>
+<div id="what-cant-i-do-with-the-api-82" class="section level1">
+<h1>What can’t I do with the API? (82)</h1>
 <p>The other important question to answer is what the API can’t do.</p>
 <p>Most importantly, it can’t deliver data “on demand” – extracts are
 still created through the same extract system used by the website, which
@@ -985,14 +999,14 @@ to attach characteristics of family members such as spouses or children.
 We plan to add these capabilities once the core functionality is
 well-tested and stable.</p>
 </div>
-<div id="pipe-friendly-example-78" class="section level1">
-<h1>Pipe-friendly example (78)</h1>
+<div id="pipe-friendly-example-83" class="section level1">
+<h1>Pipe-friendly example (83)</h1>
 <p>Now let’s get to some example code! We’ll start with a brief example
 that shows a typical API workflow using the “pipe” operator from the
 magrittr package, which is often used in conjunction with tidyverse
 packages such as dplyr.</p>
 <p>We start by defining an extract object using the
-<code>define_extract()</code> function, and specifying</p>
+<code>define_extract_micro()</code> function, and specifying</p>
 <ul>
 <li>a data collection – in this case, “usa”</li>
 <li>an extract description – “Occupation by sex and age”</li>
@@ -1011,13 +1025,13 @@ using <code>read_ipums_micro()</code>.</p>
 expression will take a bit of time to execute, depending on the size of
 your extract.</p>
 </div>
-<div id="pipe-friendly-example-79" class="section level1">
-<h1>Pipe-friendly example (79)</h1>
+<div id="pipe-friendly-example-84" class="section level1">
+<h1>Pipe-friendly example (84)</h1>
 <p>And just for fun, here’s what the same piped expression looks like
 with the new base R pipe, available as of R 4.1.</p>
 </div>
-<div id="pipe-friendly-example-80" class="section level1">
-<h1>Pipe-friendly example (80)</h1>
+<div id="pipe-friendly-example-85" class="section level1">
+<h1>Pipe-friendly example (85)</h1>
 <p>Here are the messages you’ll see if you run that code once the API is
 live. As you can see, the <code>wait_for_extract()</code> function
 doubles the wait time after every status check, but the maximum wait
@@ -1026,8 +1040,8 @@ I’ve done, even large extracts of around 30 million records and 40-50
 variables can finish in under 30 minutes, but the wait times also depend
 on how much traffic the extract system is getting.</p>
 </div>
-<div id="revise-and-resubmit-81" class="section level1">
-<h1>Revise and resubmit (81)</h1>
+<div id="revise-and-resubmit-86" class="section level1">
+<h1>Revise and resubmit (86)</h1>
 <p>Another handy workflow where using the extract API is a “revise and
 resubmit” workflow. Often, you might realize that you should have added
 one more or a few more variables to your previous extract, and you just
@@ -1039,8 +1053,8 @@ of your most recent extract using the function
 to revise, we can use <code>get_extract_info()</code> and specify a
 shorthand notation for USA extract number 33, for example.</p>
 </div>
-<div id="revise-and-resubmit-82" class="section level1">
-<h1>Revise and resubmit (82)</h1>
+<div id="revise-and-resubmit-87" class="section level1">
+<h1>Revise and resubmit (87)</h1>
 <p>Once we have the old extract definition, we can pass it to the
 <code>revise_extract()</code> function to add a variable, then resubmit
 it.</p>
@@ -1048,8 +1062,8 @@ it.</p>
 add and remove variables and samples, as well as change the description,
 data format, or data structure of your extract definition.</p>
 </div>
-<div id="share-your-extract-definition-83" class="section level1">
-<h1>Share your extract definition (83)</h1>
+<div id="share-your-extract-definition-88" class="section level1">
+<h1>Share your extract definition (88)</h1>
 <p>One thing that really excites us about the API is the ability to
 share extract definitions to facilitate collaboration or
 reproducibility.</p>
@@ -1066,11 +1080,11 @@ shared by someone else.</p>
 functionality could also be useful for instructors who want to share an
 extract definition with students for a class assignment.</p>
 </div>
-<div id="overview-84" class="section level1">
-<h1>Overview (84)</h1>
+<div id="overview-89" class="section level1">
+<h1>Overview (89)</h1>
 </div>
-<div id="resources-85" class="section level1">
-<h1>Resources (85)</h1>
+<div id="resources-90" class="section level1">
+<h1>Resources (90)</h1>
 </div>
 
 

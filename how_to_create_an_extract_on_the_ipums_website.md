@@ -181,4 +181,4 @@ I would have had over 50 million records, which would have taken a few hours to
 process and would have been difficult to analyze, so it's good to keep that 
 select cases option in mind.
 
-[This script took me about 10.5 minutes when I practiced it.]
+[This script took me about 10.5 minutes when I practiced it. (10:23 second time)]

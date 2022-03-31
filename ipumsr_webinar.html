@@ -5,18 +5,17 @@
     <meta charset="utf-8" />
     <meta name="author" content="Derek Burk, Dan Ehrlich, &amp; Kara Fisher" />
     <meta name="date" content="2022-03-31" />
-    <script src="libs/header-attrs-2.13/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
     <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="libs/datatables-binding-0.21/datatables.js"></script>
-    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
-    <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
-    <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+    <script src="libs/datatables-binding-0.15/datatables.js"></script>
+    <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -296,21 +295,18 @@ class: center
 
 ## IPUMS is **data**
 
---
 
 ## from censuses and surveys around the world,
 
---
 
-## integrated across space and time,
+## **harmonized** across space and time,
 
---
 
 ## thoroughly documented,
 
---
 
 ## and available for free at ipums.org
+
 
 ???
 
@@ -322,10 +318,19 @@ started with **US census data** has grown to include 9 collections
 
 
 ---
+
+# Harmonization
+
+
+
+&lt;img src="images/harmonization_4.png" width="3301" /&gt;
+
+
+---
 # 
 ![IPUMS US Project logo](images/usa.jpg)
 
---
+
 
 - U.S. Census and American Community Survey **microdata** from 1850 to the present.
 
@@ -342,12 +347,18 @@ started with **US census data** has grown to include 9 collections
 # 
 ![IPUMS US Project logo](images/usa.jpg)
 
---
+
 
 - “Historical Trends in Children Living in Multigenerational Households in the United States: 1870–2018” 
 - Natasha V. Pilkauskas, Mariana Amorim, and Rachel E. Dunifon
 
-![Trends in multigenerational households by income level and race/ethnicity](images/example_usa1.png)
+
+
+
+
+&lt;img src="images/example_usa1.png" width="5765" /&gt;
+
+
 
 ???
 
@@ -357,7 +368,7 @@ started with **US census data** has grown to include 9 collections
 # 
 ![IPUMS CPS project logo](images/cps.jpg)
 
---
+
 
 - Current Population Survey **microdata** from 1962 to the present.
 
@@ -371,7 +382,7 @@ started with **US census data** has grown to include 9 collections
 ![IPUMS Health Surveys project logo](images/health.jpg)
 
 
---
+
 
 
 - Health **survey** data from the National Health Interview Survey (NHIS) from the 1960s to the present and the Medical Expenditure Panel Survey (MEPS) from 1996.
@@ -388,8 +399,6 @@ started with **US census data** has grown to include 9 collections
 # 
 ![IPUMS Health Surveys project logo](images/health.jpg)
 
-
---
 
 
 - “Hearing Impairment, Household Composition, Marital Status, and Mortality Among U.S. Adults” 
@@ -408,7 +417,7 @@ Looked at relationship between degrees of hearing impairment and mortality rates
 # 
 ![IPUMS Higher Ed project logo](images/highered.jpg)
 
---
+
 
 
 - Scientists and Engineers Statistical Data System (SESTAT), the leading surveys for studying the science and engineering (STEM) workforce in the United States
@@ -423,7 +432,7 @@ Looked at relationship between degrees of hearing impairment and mortality rates
 # 
 ![IPUMS Time Use project logo](images/time_use.jpg)
 
---
+
 
 - Historical and contemporary time use data from 1965 to the present.
 
@@ -433,71 +442,103 @@ Looked at relationship between degrees of hearing impairment and mortality rates
 
 
 ---
+
 # 
 ![IPUMS Time Use project logo](images/time_use.jpg)
-
+.pull-left[
 - Nathan Yau of Flowing Data
 
 - http://flowingdata.com/projects/2015/timeuse-simulation/
+]
 
-![visualization showing individual dots moving between activities](images/example_time_use.png)
+.pull-right[
+!["Visualization of individuals (dots) moving between activity categories."](images/example_time_use.png)
+
+]
+
 
 
 ---
-# 
+
+.pull-left[ 
 ![IPUMS NHGIS project logo](images/nhgis.jpg)
 
+]
 
---
+
+.pull-right[
+
+
+![IPUMS IHGIS project logo](images/ihgis.jpg)
+]
+
+
+
+.pull-left[ 
+
+- **NHGIS** Shapefiles for all levels of US geography including tracts, from 1790 to the present
+
+
+- https://www.nhgis.org/
+]
+
+
+.pull-right[
+
+
+- **IGIS** Shapefiles for admin level 2
+
+- https://ihgis.ipums.org/
+
+
+]
 
 - Summary tables and time series of population, housing, agriculture, and economic data 
 
-- GIS Shapefiles for all levels of US geography, including tracts, from 1790 to the present
-
-- https://www.nhgis.org/
-
 
 
 
 ---
-# 
-![IPUMS NHGIS project logo](images/nhgis.jpg)
+# ![IPUMS NHGIS project logo](images/nhgis.jpg)
 
-.pull-left[
+
 - “Migrant Selection and Sorting during the Great American Drought.” 
 - Christopher Sichko
+
+
+
+
+.pull-left[
+![map showing extent of drought](images/example_nhgis1.png)
+
+
+
 ]
 
 .pull-right[
 
-![map showing extent of drought](images/example_nhgis1.png)
+
+
+![map showing educational achievement by region](images/example_nhgis2b.png)
+
 
 ]
 
-![Maps showing individual educational attainment by region](images/example_nhgis2.png)
-
----
-
-# 
-![IPUMS IHGIS project logo](images/ihgis.jpg)
-
-
-- https://ihgis.ipums.org/
 
 
 ---
 # 
 ![IPUMS international project logo](images/int.jpg)
 
---
 
 
-- Census **microdata** covering 102 countries from 1960 to the present 
+
+- Census **microdata** covering 103 countries from 1960 to the present 
 
 
-- International historic **microdata** from the 19th and early 20th centuries for *9* countries.
+- International historic **microdata** from the 19th and early 20th centuries available for some samples.
 
---
+
 
 - Labor Force surveys provide high resolution **microdata** about work conditions
 
@@ -512,7 +553,7 @@ Looked at relationship between degrees of hearing impairment and mortality rates
 # 
 ![IPUMS international project logo](images/int.jpg)
 
---
+
 
 .pull-left[
 
@@ -534,7 +575,7 @@ Looked at relationship between degrees of hearing impairment and mortality rates
 ![IPUMS Global Health project logo](images/dhs.jpg)
 
 
---
+
 
 
 - Demographic and Health Surveys (DHS) provide integrated **microdata** for analysis across time and space.
@@ -555,7 +596,7 @@ Looked at relationship between degrees of hearing impairment and mortality rates
 ![IPUMS Global Health project logo](images/dhs.jpg)
 
 
---
+
 
 .pull-left[
 ![alluvial plot showing which individuals were using family planning at two points in time](images/example_global_health.png)
@@ -581,9 +622,18 @@ Check out blog using IPUMS Global Health Data
 ]
 
 .pull-left[
+
 - IPUMS is **a lot** of data
 
-- United in consistently documented metadata
+- Individual-level microdata
+
+- Summarized tabular data
+
+- GIS shapefiles
+
+- Consistent and extensively documented **metadata**
+
+
 ]
 
 
@@ -605,9 +655,15 @@ So ipums really is **data** and a whole lot of it. These 9 different projects in
 .pull-left[
 - IPUMS is **a lot** of data
 
-- United in consistently documented metadata
+- Individual-level microdata
 
-- *What's the best way to interact with IPUMS data?*
+- Summarized tabular data
+
+- GIS shapefiles
+
+- Consistent and extensively documented **metadata**
+
+- *How can I work with all this IPUMS data?*
 ]
 
 
@@ -670,16 +726,12 @@ So ipums really is **data** and a whole lot of it. These 9 different projects in
 
 - R package developed by Greg Freedman Ellis
 
---
 
 - Released in 2017
 
 
---
-
 - Over 100,000 CRAN downloads
 
---
 
 - Includes functions for
   - Reading IPUMS data
@@ -701,15 +753,15 @@ Initial API support will be for IPUMS USA, with more projects to follow soon.
 
 - One package for IPUMS microdata, aggregate data, and geography
 
---
+
 
 - Specialized functions for viewing and manipulating IPUMS metadata
 
---
+
 
 - Bundled how-to guides (vignettes)
 
---
+
 
 - Potential to add more features (e.g. API support); let us know what you want!
   - File an issue at https://github.com/mnpopcenter/ipumsr/issues
@@ -746,7 +798,7 @@ background-size: cover
 
 
 
-&lt;img src="images/transparent_blank.png" title="Slide background shows: The 'One Ring' from The Lord of the Rings set on a fiery background." alt="Slide background shows: The 'One Ring' from The Lord of the Rings set on a fiery background." width="33" /&gt;
+&lt;img src="images/transparent_blank.png" width="33" /&gt;
 
 
 ---
@@ -755,17 +807,16 @@ background-size: cover
 
 And finally... 
 
---
 
 - It's fast!
   - Time to read 3 million rows with 13 variables:
 
-<div id="lgswjysjcp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="mkorjfinrf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#lgswjysjcp .gt_table {
+#mkorjfinrf .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -790,7 +841,7 @@ And finally...
   border-left-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_heading {
+#mkorjfinrf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -802,33 +853,37 @@ And finally...
   border-right-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_title {
+#mkorjfinrf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
 
-#lgswjysjcp .gt_subtitle {
+#mkorjfinrf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#lgswjysjcp .gt_bottom_border {
+#mkorjfinrf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_col_headings {
+#mkorjfinrf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -843,7 +898,7 @@ And finally...
   border-right-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_col_heading {
+#mkorjfinrf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -863,7 +918,7 @@ And finally...
   overflow-x: hidden;
 }
 
-#lgswjysjcp .gt_column_spanner_outer {
+#mkorjfinrf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -875,15 +930,15 @@ And finally...
   padding-right: 4px;
 }
 
-#lgswjysjcp .gt_column_spanner_outer:first-child {
+#mkorjfinrf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lgswjysjcp .gt_column_spanner_outer:last-child {
+#mkorjfinrf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lgswjysjcp .gt_column_spanner {
+#mkorjfinrf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -895,8 +950,11 @@ And finally...
   width: 100%;
 }
 
-#lgswjysjcp .gt_group_heading {
-  padding: 8px;
+#mkorjfinrf .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -917,7 +975,7 @@ And finally...
   vertical-align: middle;
 }
 
-#lgswjysjcp .gt_empty_group_heading {
+#mkorjfinrf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -932,15 +990,15 @@ And finally...
   vertical-align: middle;
 }
 
-#lgswjysjcp .gt_from_md > :first-child {
+#mkorjfinrf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lgswjysjcp .gt_from_md > :last-child {
+#mkorjfinrf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lgswjysjcp .gt_row {
+#mkorjfinrf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -959,7 +1017,7 @@ And finally...
   overflow-x: hidden;
 }
 
-#lgswjysjcp .gt_stub {
+#mkorjfinrf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -968,10 +1026,29 @@ And finally...
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#lgswjysjcp .gt_summary_row {
+#mkorjfinrf .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mkorjfinrf .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mkorjfinrf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -981,17 +1058,26 @@ And finally...
   padding-right: 5px;
 }
 
-#lgswjysjcp .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
+#mkorjfinrf .gt_first_summary_row {
   border-top-style: solid;
-  border-top-width: 2px;
   border-top-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_grand_summary_row {
+#mkorjfinrf .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mkorjfinrf .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mkorjfinrf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1001,7 +1087,7 @@ And finally...
   padding-right: 5px;
 }
 
-#lgswjysjcp .gt_first_grand_summary_row {
+#mkorjfinrf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1011,11 +1097,11 @@ And finally...
   border-top-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_striped {
+#mkorjfinrf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lgswjysjcp .gt_table_body {
+#mkorjfinrf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1024,7 +1110,7 @@ And finally...
   border-bottom-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_footnotes {
+#mkorjfinrf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1038,13 +1124,16 @@ And finally...
   border-right-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_footnote {
+#mkorjfinrf .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#lgswjysjcp .gt_sourcenotes {
+#mkorjfinrf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1058,44 +1147,71 @@ And finally...
   border-right-color: #D3D3D3;
 }
 
-#lgswjysjcp .gt_sourcenote {
+#mkorjfinrf .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#lgswjysjcp .gt_left {
+#mkorjfinrf .gt_left {
   text-align: left;
 }
 
-#lgswjysjcp .gt_center {
+#mkorjfinrf .gt_center {
   text-align: center;
 }
 
-#lgswjysjcp .gt_right {
+#mkorjfinrf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lgswjysjcp .gt_font_normal {
+#mkorjfinrf .gt_font_normal {
   font-weight: normal;
 }
 
-#lgswjysjcp .gt_font_bold {
+#mkorjfinrf .gt_font_bold {
   font-weight: bold;
 }
 
-#lgswjysjcp .gt_font_italic {
+#mkorjfinrf .gt_font_italic {
   font-style: italic;
 }
 
-#lgswjysjcp .gt_super {
+#mkorjfinrf .gt_super {
   font-size: 65%;
 }
 
-#lgswjysjcp .gt_footnote_marks {
+#mkorjfinrf .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#mkorjfinrf .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mkorjfinrf .gt_slash_mark {
+  font-size: 0.7em;
+  line-height: 0.7em;
+  vertical-align: 0.15em;
+}
+
+#mkorjfinrf .gt_fraction_numerator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: 0.45em;
+}
+
+#mkorjfinrf .gt_fraction_denominator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: -0.05em;
 }
 </style>
 <table class="gt_table">
@@ -1139,38 +1255,12 @@ to read the data in with attached metadata, such as variable and value labels.
 Relatively small example, so the time costs can grow with larger datasets.
 
 
----
 
-# Installing ipumsr
-
-```r
-install.packages("ipumsr")
-```
-
---
-
-### Or if you want the development version
-
-- www.github.com/ipums/ipumsr
-
-
-```r
-if (!require(remotes)) install.packages("remotes")
-remotes::install_github("ipums/ipumsr")
-```
-
-???
-
-More advanced users might be thinking, *"this stable release is boring"* in which case you can download the development version to test out the latest features. 
-
-The API functions are in the development version. The API itself is not yet 
-publicly available, but email IPUMS support at ipums@umn.edu if you're 
-interested in becoming a beta tester.
 
 ---
 class: center, middle
 
-# To run the code in this webinar
+# To run the code in this presentation
 
 ???
 
@@ -1180,14 +1270,12 @@ However, you may need to install some additional packages used in the example co
 
 ---
 
-
+.pull-left[
 # Install R packages (as needed)
 
 
 ```r
-
-
-# install.packages(ipumsr)
+install.packages(ipumsr)
 
 ## Tidyverse
 install.packages("dplyr")
@@ -1202,29 +1290,37 @@ install.packages("DT")
 install.packages("sf")
 ```
 
+]
+
+
+.pull-right[
+# Load R packages (each time)
+
+```r
+library(ipumsr)
+
+## Tidyverse
+library(dplyr)
+library(ggplot2)
+library(stringr)
+library(purrr)
+
+## HTML tables
+library(DT)
+
+## gis
+library(sf)
+```
+
+]
+
+
+
+
 ???
 
 reminder, installing packages only needs to happen once, but some packages do update frequently so it can be a good idea to re-install once in a while
 
----
-
-
-
-# Loading packages
-
-```r
-library(ipumsr)
-library(dplyr)
-library(ggplot2)
-library(stringr)
-library(sf)
-library(purrr)
-```
-
-
-
-???
-These packages are used in some of the examples we will walk through.
 
 ---
 
@@ -1295,7 +1391,7 @@ Website demo ends, back to slides. Derek passes to Kara.
 
 # Downloading your data extract
 
-&lt;img src="images/microdata_annotated_screenshot.png" title="Screenshot of IPUMS data download page with overlaid instructions: 1. Click the 'Download .DAT' link to download the data. 2. Right click the 'DDI' link. 3. In the right-click menu, choose 'Save link as' in Firefox or Chrome, or 'Download Linked File' in Safari." alt="Screenshot of IPUMS data download page with overlaid instructions: 1. Click the 'Download .DAT' link to download the data. 2. Right click the 'DDI' link. 3. In the right-click menu, choose 'Save link as' in Firefox or Chrome, or 'Download Linked File' in Safari." width="1472" /&gt;
+&lt;img src="images/microdata_annotated_screenshot.png" width="1472" /&gt;
 
 --
 
@@ -1328,7 +1424,7 @@ Make sure to save the data and DDI files in the same location.
 
 - Optional: "R" link contains code to read in your data with ipumsr
 
-&lt;img src="images/download_screenshot_2.png" title="Screenshot of IPUMS data download page with the 'R' link highlighted" alt="Screenshot of IPUMS data download page with the 'R' link highlighted" width="3621" /&gt;
+&lt;img src="images/download_screenshot_2.png" width="3621" /&gt;
 
 
 ???
@@ -1395,7 +1491,7 @@ class: center middle
 
 class: center middle inverse
 
-&lt;img src="images/matrix-code.gif" title="Columns of green symbols streaming down a black background" alt="Columns of green symbols streaming down a black background"  /&gt;
+![](images/matrix-code.gif)&lt;!-- --&gt;
 
 .imgsrc[
   Source: https://c.tenor.com/KBe_nw4IL2QAAAAC/matrix-code.gif
@@ -1478,21 +1574,21 @@ data is the "var_info" element, so let's take a look at that.
 
 ```r
 ddi$var_info
-#&gt; # A tibble: 12 x 10
-#&gt;    var_name var_label                                 var_desc                           val_labels code_instr start   end imp_decim var_type rectypes
-#&gt;    &lt;chr&gt;    &lt;chr&gt;                                     &lt;chr&gt;                              &lt;list&gt;     &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    &lt;lgl&gt;   
-#&gt;  1 YEAR     Census year                               "YEAR reports the four-digit year~ &lt;tibble&gt;    &lt;NA&gt;          1     4         0 integer  NA      
-#&gt;  2 DATANUM  Data set number                           "DATANUM identifies the particula~ &lt;tibble&gt;   "\n\nThe ~     5     6         0 numeric  NA      
-#&gt;  3 SERIAL   Household serial number                   "SERIAL is an identifying number ~ &lt;tibble&gt;   "\nSERIAL~     7    14         0 numeric  NA      
-#&gt;  4 HHWT     Household weight                          "HHWT indicates how many househol~ &lt;tibble&gt;   "\nHHWT i~    15    24         2 numeric  NA      
-#&gt;  5 STATEFIP State (FIPS code)                         "STATEFIP reports the state in wh~ &lt;tibble&gt;    &lt;NA&gt;         25    26         0 integer  NA      
-#&gt;  6 CONSPUMA Consistent PUMA, 1980-1990-2000           "CONSPUMA identifies the most det~ &lt;tibble&gt;   "\nCONSPU~    27    29         0 numeric  NA      
-#&gt;  7 GQ       Group quarters status                     "GQ classifies all housing units ~ &lt;tibble&gt;    &lt;NA&gt;         30    30         0 integer  NA      
-#&gt;  8 PHONE    Telephone availability                    "PHONE indicates whether resident~ &lt;tibble&gt;    &lt;NA&gt;         31    31         0 integer  NA      
-#&gt;  9 PERNUM   Person number in sample unit              "PERNUM numbers all persons withi~ &lt;tibble&gt;   "\n\nPERN~    32    35         0 numeric  NA      
-#&gt; 10 PERWT    Person weight                             "PERWT indicates how many persons~ &lt;tibble&gt;   "\nPERWT ~    36    45         2 numeric  NA      
-#&gt; 11 EDUC     Educational attainment [general version]  "EDUC indicates respondents' educ~ &lt;tibble&gt;    &lt;NA&gt;         46    47         0 integer  NA      
-#&gt; 12 EDUCD    Educational attainment [detailed version] "EDUC indicates respondents' educ~ &lt;tibble&gt;    &lt;NA&gt;         48    50         0 integer  NA
+#&gt; # A tibble: 12 × 10
+#&gt;    var_name var_label                                 var_desc              val_labels  code_instr             start   end imp_decim var_type rectypes
+#&gt;    &lt;chr&gt;    &lt;chr&gt;                                     &lt;chr&gt;                 &lt;list&gt;      &lt;chr&gt;                  &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    &lt;lgl&gt;   
+#&gt;  1 YEAR     Census year                               "YEAR reports the fo… &lt;tibble [0…  NA                        1     4         0 integer  NA      
+#&gt;  2 DATANUM  Data set number                           "DATANUM identifies … &lt;tibble [0… "\n\nThe following ye…     5     6         0 numeric  NA      
+#&gt;  3 SERIAL   Household serial number                   "SERIAL is an identi… &lt;tibble [0… "\nSERIAL is an 8-dig…     7    14         0 numeric  NA      
+#&gt;  4 HHWT     Household weight                          "HHWT indicates how … &lt;tibble [0… "\nHHWT is a 6-digit …    15    24         2 numeric  NA      
+#&gt;  5 STATEFIP State (FIPS code)                         "STATEFIP reports th… &lt;tibble [6…  NA                       25    26         0 integer  NA      
+#&gt;  6 CONSPUMA Consistent PUMA, 1980-1990-2000           "CONSPUMA identifies… &lt;tibble [0… "\nCONSPUMA is a 5-di…    27    29         0 numeric  NA      
+#&gt;  7 GQ       Group quarters status                     "GQ classifies all h… &lt;tibble [7…  NA                       30    30         0 integer  NA      
+#&gt;  8 PHONE    Telephone availability                    "PHONE indicates whe… &lt;tibble [4…  NA                       31    31         0 integer  NA      
+#&gt;  9 PERNUM   Person number in sample unit              "PERNUM numbers all … &lt;tibble [0… "\n\nPERNUM is a 4-di…    32    35         0 numeric  NA      
+#&gt; 10 PERWT    Person weight                             "PERWT indicates how… &lt;tibble [0… "\nPERWT is a 6-digit…    36    45         2 numeric  NA      
+#&gt; 11 EDUC     Educational attainment [general version]  "EDUC indicates resp… &lt;tibble [1…  NA                       46    47         0 integer  NA      
+#&gt; 12 EDUCD    Educational attainment [detailed version] "EDUC indicates resp… &lt;tibble [4…  NA                       48    50         0 integer  NA
 ```
 
 
@@ -1510,7 +1606,7 @@ point to the DDI codebook, not the data file.
 
 class: center middle inverse
 
-&lt;img src="images/matrix-code.gif" title="Columns of green symbols streaming down a black background" alt="Columns of green symbols streaming down a black background"  /&gt;
+![](images/matrix-code.gif)&lt;!-- --&gt;
 
 .imgsrc[
   Source: https://c.tenor.com/KBe_nw4IL2QAAAAC/matrix-code.gif
@@ -1523,7 +1619,7 @@ So, here again is what the data file looks like without the codebook...
 
 class: center middle inverse
 
-&lt;img src="images/the-matrix-matrix.gif" title="Columns of green symbols streaming on a black background, forming the shape of three men standing at the other end of a hallway" alt="Columns of green symbols streaming on a black background, forming the shape of three men standing at the other end of a hallway"  /&gt;
+![](images/the-matrix-matrix.gif)&lt;!-- --&gt;
 
 .imgsrc[
   Source: https://c.tenor.com/uJ_GkLiWhcYAAAAC/the-matrix-matrix.gif
@@ -1617,7 +1713,7 @@ Value labels:
 
 ```r
 ipums_val_labels(ddi, PHONE)
-#&gt; # A tibble: 4 x 2
+#&gt; # A tibble: 4 × 2
 #&gt;     val lbl                           
 #&gt;   &lt;dbl&gt; &lt;chr&gt;                         
 #&gt; 1     0 N/A                           
@@ -1641,7 +1737,7 @@ suppressed.
 ipums_view(ddi)
 ```
 
-&lt;img src="images/ipums_view_screenshot.png" title="Screenshot of static html page generated by function 'ipums_view', showing variable label and variable description for the variable 'PHONE'." alt="Screenshot of static html page generated by function 'ipums_view', showing variable label and variable description for the variable 'PHONE'." width="1056" /&gt;
+&lt;img src="images/ipums_view_screenshot.png" width="1056" /&gt;
 
 ???
 For a more browsable view of the metadata, the ipums_view() function makes a
@@ -1694,20 +1790,20 @@ value and label to transform your variables into the shape you want.
 
 ```r
 data
-#&gt; # A tibble: 1,476,443 x 12
-#&gt;     YEAR DATANUM SERIAL  HHWT       STATEFIP CONSPUMA                                   GQ                    PHONE PERNUM PERWT         EDUC    EDUCD
-#&gt;    &lt;int&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;      &lt;int+lbl&gt;    &lt;dbl&gt;                            &lt;int+lbl&gt;                &lt;int+lbl&gt;  &lt;dbl&gt; &lt;dbl&gt;    &lt;int+lbl&gt; &lt;int+lb&gt;
-#&gt;  1  1960       1 336455   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      1   100 5 [Grade 11] 50 [Gra~
-#&gt;  2  1960       1 336455   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      2   100 6 [Grade 12] 60 [Gra~
-#&gt;  3  1960       1 336456   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      1   100 6 [Grade 12] 60 [Gra~
-#&gt;  4  1960       1 336456   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      2   100 6 [Grade 12] 60 [Gra~
-#&gt;  5  1960       1 336456   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      3   100 2 [Grade 5,~ 22 [Gra~
-#&gt;  6  1960       1 336456   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      4   100 0 [N/A or n~  1 [N/A]
-#&gt;  7  1960       1 336457    99 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      1    99 6 [Grade 12] 60 [Gra~
-#&gt;  8  1960       1 336457    99 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      2    99 4 [Grade 10] 40 [Gra~
-#&gt;  9  1960       1 336457    99 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      3    99 4 [Grade 10] 40 [Gra~
-#&gt; 10  1960       1 336458   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      1   100 6 [Grade 12] 60 [Gra~
-#&gt; # ... with 1,476,433 more rows
+#&gt; # A tibble: 1,476,443 × 12
+#&gt;     YEAR DATANUM SERIAL  HHWT       STATEFIP CONSPUMA                                   GQ                    PHONE PERNUM PERWT        EDUC     EDUCD
+#&gt;    &lt;int&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;      &lt;int+lbl&gt;    &lt;dbl&gt;                            &lt;int+lbl&gt;                &lt;int+lbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;int+lbl&gt; &lt;int+lbl&gt;
+#&gt;  1  1960       1 336455   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      1   100 5 [Grade 1… 50 [Grad…
+#&gt;  2  1960       1 336455   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      2   100 6 [Grade 1… 60 [Grad…
+#&gt;  3  1960       1 336456   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      1   100 6 [Grade 1… 60 [Grad…
+#&gt;  4  1960       1 336456   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      2   100 6 [Grade 1… 60 [Grad…
+#&gt;  5  1960       1 336456   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      3   100 2 [Grade 5… 22 [Grad…
+#&gt;  6  1960       1 336456   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      4   100 0 [N/A or …  1 [N/A] 
+#&gt;  7  1960       1 336457    99 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      1    99 6 [Grade 1… 60 [Grad…
+#&gt;  8  1960       1 336457    99 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      2    99 4 [Grade 1… 40 [Grad…
+#&gt;  9  1960       1 336457    99 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      3    99 4 [Grade 1… 40 [Grad…
+#&gt; 10  1960       1 336458   100 27 [Minnesota]       NA 1 [Households under 1970 definition] 2 [Yes, phone available]      1   100 6 [Grade 1… 60 [Grad…
+#&gt; # … with 1,476,433 more rows
 ```
 
 ???
@@ -1728,7 +1824,7 @@ against this approach in general, but it could be what you want in some cases.
 
 ```r
 as_factor(data)
-#&gt; # A tibble: 1,476,443 x 12
+#&gt; # A tibble: 1,476,443 × 12
 #&gt;     YEAR DATANUM SERIAL  HHWT STATEFIP  CONSPUMA GQ                               PHONE                PERNUM PERWT EDUC                EDUCD   
 #&gt;    &lt;int&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;        &lt;dbl&gt; &lt;fct&gt;                            &lt;fct&gt;                 &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;               &lt;fct&gt;   
 #&gt;  1  1960       1 336455   100 Minnesota       NA Households under 1970 definition Yes, phone available      1   100 Grade 11            Grade 11
@@ -1741,7 +1837,7 @@ as_factor(data)
 #&gt;  8  1960       1 336457    99 Minnesota       NA Households under 1970 definition Yes, phone available      2    99 Grade 10            Grade 10
 #&gt;  9  1960       1 336457    99 Minnesota       NA Households under 1970 definition Yes, phone available      3    99 Grade 10            Grade 10
 #&gt; 10  1960       1 336458   100 Minnesota       NA Households under 1970 definition Yes, phone available      1   100 Grade 12            Grade 12
-#&gt; # ... with 1,476,433 more rows
+#&gt; # … with 1,476,433 more rows
 ```
 
 ???
@@ -1756,7 +1852,7 @@ the labels as factor levels.
 
 ```r
 zap_labels(data)
-#&gt; # A tibble: 1,476,443 x 12
+#&gt; # A tibble: 1,476,443 × 12
 #&gt;     YEAR DATANUM SERIAL  HHWT STATEFIP CONSPUMA    GQ PHONE PERNUM PERWT  EDUC EDUCD
 #&gt;    &lt;int&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;    &lt;int&gt;    &lt;dbl&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt;
 #&gt;  1  1960       1 336455   100       27       NA     1     2      1   100     5    50
@@ -1769,7 +1865,7 @@ zap_labels(data)
 #&gt;  8  1960       1 336457    99       27       NA     1     2      2    99     4    40
 #&gt;  9  1960       1 336457    99       27       NA     1     2      3    99     4    40
 #&gt; 10  1960       1 336458   100       27       NA     1     2      1   100     6    60
-#&gt; # ... with 1,476,433 more rows
+#&gt; # … with 1,476,433 more rows
 ```
 
 
@@ -1807,7 +1903,7 @@ class: center middle
 
 ```r
 ipums_val_labels(data$PHONE)
-#&gt; # A tibble: 4 x 2
+#&gt; # A tibble: 4 × 2
 #&gt;     val lbl                           
 #&gt;   &lt;int&gt; &lt;chr&gt;                         
 #&gt; 1     0 N/A                           
@@ -1841,8 +1937,8 @@ data$PHONE2 &lt;- lbl_na_if(data$PHONE, ~.val %in% c(0, 8)) %&gt;%
 
 . . . 
 
-<div id="htmlwidget-7357fc8a2a6d904de828" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7357fc8a2a6d904de828">{"x":{"filter":"none","vertical":false,"data":[["[0] N/A","[1] No, no phone available","[2] Yes, phone available","[8] Suppressed (2012 and 2015 ACS)"],[null,"No, no phone available","Yes, phone available",null],[41133,30852,1404458,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>before ([val] label)<\/th>\n      <th>after<\/th>\n      <th>count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"scrollY":"200px","scrollCollapse":true,"paging":false,"bInfo":false,"columnDefs":[{"className":"dt-right","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2891fd9694fa4a0ab84b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2891fd9694fa4a0ab84b">{"x":{"filter":"none","data":[["[0] N/A","[1] No, no phone available","[2] Yes, phone available","[8] Suppressed (2012 and 2015 ACS)"],[null,"No, no phone available","Yes, phone available",null],[41133,30852,1404458,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>before ([val] label)<\/th>\n      <th>after<\/th>\n      <th>count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"scrollY":"200px","scrollCollapse":true,"paging":false,"bInfo":false,"columnDefs":[{"className":"dt-right","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ???
 `lbl_na_if()` supports a special syntax used by a few of ipumsr's label
@@ -1876,8 +1972,8 @@ data$PHONE2 &lt;- lbl_na_if(
 
 . . . 
 
-<div id="htmlwidget-7e03e2f12f75d6acdeef" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7e03e2f12f75d6acdeef">{"x":{"filter":"none","vertical":false,"data":[["[0] N/A","[1] No, no phone available","[2] Yes, phone available","[8] Suppressed (2012 and 2015 ACS)"],[null,"No, no phone available","Yes, phone available",null],[41133,30852,1404458,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>before ([val] label)<\/th>\n      <th>after<\/th>\n      <th>count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"scrollY":"200px","scrollCollapse":true,"paging":false,"bInfo":false,"columnDefs":[{"className":"dt-right","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ae4b3036e173914a9de7" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ae4b3036e173914a9de7">{"x":{"filter":"none","data":[["[0] N/A","[1] No, no phone available","[2] Yes, phone available","[8] Suppressed (2012 and 2015 ACS)"],[null,"No, no phone available","Yes, phone available",null],[41133,30852,1404458,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>before ([val] label)<\/th>\n      <th>after<\/th>\n      <th>count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"scrollY":"200px","scrollCollapse":true,"paging":false,"bInfo":false,"columnDefs":[{"className":"dt-right","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ???
 In case you're unfamiliar with the anonymous function notation, that squiggly 
@@ -1912,7 +2008,7 @@ be set to missing if the original label was "N/A" or "Suppressed".
 
 ```r
 ipums_val_labels(data$EDUCD)
-#&gt; # A tibble: 44 x 2
+#&gt; # A tibble: 44 × 2
 #&gt;      val lbl                      
 #&gt;    &lt;int&gt; &lt;chr&gt;                    
 #&gt;  1     0 N/A or no schooling      
@@ -1925,7 +2021,7 @@ ipums_val_labels(data$EDUCD)
 #&gt;  8    14 Grade 1                  
 #&gt;  9    15 Grade 2                  
 #&gt; 10    16 Grade 3                  
-#&gt; # ... with 34 more rows
+#&gt; # … with 34 more rows
 ```
 
 
@@ -1944,14 +2040,14 @@ and so on.
 
 
 ```r
-data$EDUCD2 &lt;- lbl_collapse(data$EDUCD, ~.val %/% 10) %&gt;%
-  as_factor(ordered = TRUE)
+data$EDUCD2 &lt;- lbl_collapse(data$EDUCD, ~.val%/%10) %&gt;%
+    as_factor(ordered = TRUE)
 ```
 
 . . .
 
-<div id="htmlwidget-1dbaad5487f47a59ddc9" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1dbaad5487f47a59ddc9">{"x":{"filter":"none","vertical":false,"data":[["[0] N/A or no schooling","[1] N/A","[2] No schooling completed","[10] Nursery school to grade 4","[11] Nursery school, preschool","[12] Kindergarten","[13] Grade 1, 2, 3, or 4","[14] Grade 1","[15] Grade 2","[16] Grade 3","[17] Grade 4","[20] Grade 5, 6, 7, or 8","[21] Grade 5 or 6","[22] Grade 5","[23] Grade 6","[24] Grade 7 or 8","[25] Grade 7","[26] Grade 8","[30] Grade 9","[40] Grade 10","[50] Grade 11","[60] Grade 12","[61] 12th grade, no diploma","[62] High school graduate or GED","[63] Regular high school diploma","[64] GED or alternative credential","[65] Some college, but less than 1 year","[70] 1 year of college","[71] 1 or more years of college credit, no degree","[80] 2 years of college","[81] Associate's degree, type not specified","[82] Associate's degree, occupational program","[83] Associate's degree, academic program","[90] 3 years of college","[100] 4 years of college","[101] Bachelor's degree","[110] 5+ years of college","[111] 6 years of college (6+ in 1960-1970)","[112] 7 years of college","[113] 8+ years of college","[114] Master's degree","[115] Professional degree beyond a bachelor's degree","[116] Doctoral degree","[999] Missing"],["N/A or no schooling","N/A or no schooling","N/A or no schooling","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 9","Grade 10","Grade 11","Grade 12","Grade 12","Grade 12","Grade 12","Grade 12","Grade 12","1 year of college","1 year of college","2 years of college","2 years of college","2 years of college","2 years of college","3 years of college","4 years of college","4 years of college","5+ years of college","5+ years of college","5+ years of college","5+ years of college","5+ years of college","5+ years of college","5+ years of college","Missing"],[11811,50098,50114,40324,14976,14611,15871,10715,11500,11836,12399,27934,16637,12274,14020,28589,15962,40520,39440,46037,44797,67118,17653,170139,102651,12312,65168,13985,156110,12989,69752,9937,3888,6712,15917,147940,4280,3062,1303,1799,42621,13744,6898,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>before ([val] label)<\/th>\n      <th>after<\/th>\n      <th>count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"scrollY":"200px","scrollCollapse":true,"paging":false,"bInfo":false,"columnDefs":[{"className":"dt-right","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-447351f5e07a21d26e25" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-447351f5e07a21d26e25">{"x":{"filter":"none","data":[["[0] N/A or no schooling","[1] N/A","[2] No schooling completed","[10] Nursery school to grade 4","[11] Nursery school, preschool","[12] Kindergarten","[13] Grade 1, 2, 3, or 4","[14] Grade 1","[15] Grade 2","[16] Grade 3","[17] Grade 4","[20] Grade 5, 6, 7, or 8","[21] Grade 5 or 6","[22] Grade 5","[23] Grade 6","[24] Grade 7 or 8","[25] Grade 7","[26] Grade 8","[30] Grade 9","[40] Grade 10","[50] Grade 11","[60] Grade 12","[61] 12th grade, no diploma","[62] High school graduate or GED","[63] Regular high school diploma","[64] GED or alternative credential","[65] Some college, but less than 1 year","[70] 1 year of college","[71] 1 or more years of college credit, no degree","[80] 2 years of college","[81] Associate's degree, type not specified","[82] Associate's degree, occupational program","[83] Associate's degree, academic program","[90] 3 years of college","[100] 4 years of college","[101] Bachelor's degree","[110] 5+ years of college","[111] 6 years of college (6+ in 1960-1970)","[112] 7 years of college","[113] 8+ years of college","[114] Master's degree","[115] Professional degree beyond a bachelor's degree","[116] Doctoral degree","[999] Missing"],["N/A or no schooling","N/A or no schooling","N/A or no schooling","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Nursery school to grade 4","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 5, 6, 7, or 8","Grade 9","Grade 10","Grade 11","Grade 12","Grade 12","Grade 12","Grade 12","Grade 12","Grade 12","1 year of college","1 year of college","2 years of college","2 years of college","2 years of college","2 years of college","3 years of college","4 years of college","4 years of college","5+ years of college","5+ years of college","5+ years of college","5+ years of college","5+ years of college","5+ years of college","5+ years of college","Missing"],[11811,50098,50114,40324,14976,14611,15871,10715,11500,11836,12399,27934,16637,12274,14020,28589,15962,40520,39440,46037,44797,67118,17653,170139,102651,12312,65168,13985,156110,12989,69752,9937,3888,6712,15917,147940,4280,3062,1303,1799,42621,13744,6898,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>before ([val] label)<\/th>\n      <th>after<\/th>\n      <th>count<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"scrollY":"200px","scrollCollapse":true,"paging":false,"bInfo":false,"columnDefs":[{"className":"dt-right","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ???
 [Read bullet point]
@@ -1979,7 +2075,7 @@ of the usefulness and power of this function.
 data$EDUCD %&gt;% 
   lbl_collapse(~.val %/% 10) %&gt;% 
   ipums_val_labels()
-#&gt; # A tibble: 13 x 2
+#&gt; # A tibble: 13 × 2
 #&gt;      val lbl                      
 #&gt;    &lt;dbl&gt; &lt;chr&gt;                    
 #&gt;  1     0 N/A or no schooling      
@@ -2202,7 +2298,7 @@ What's going on here?
 
 # Interpretation
 
-&lt;img src="images/comparability_screenshot.png" title="Screenshot from the IPUMS USA website showing the Comparability tab for the variable PHONE. The Comparability tab and the text 'The 2008 ACS and 2008 PRCS instructed respondents to include cell phone service; prior to 2008, this was not made explicit.' are highlighted for emphasis." alt="Screenshot from the IPUMS USA website showing the Comparability tab for the variable PHONE. The Comparability tab and the text 'The 2008 ACS and 2008 PRCS instructed respondents to include cell phone service; prior to 2008, this was not made explicit.' are highlighted for emphasis." width="4025" /&gt;
+&lt;img src="images/comparability_screenshot.png" width="4025" /&gt;
 
 
 ???
@@ -2278,7 +2374,7 @@ declined since 1960.
 
 # Getting geographic data
 
-&lt;img src="images/geography_screenshot.png" title="Screenshot from the IPUMS USA homepage with an arrow pointing to the 'Geography &amp;amp; GIS' link in the left sidebar." alt="Screenshot from the IPUMS USA homepage with an arrow pointing to the 'Geography &amp;amp; GIS' link in the left sidebar." width="3892" /&gt;
+&lt;img src="images/geography_screenshot.png" width="3892" /&gt;
 
 ???
 Geographic boundary data is usually found via a "Geography and GIS" link on the
@@ -2303,14 +2399,12 @@ own folder within your project directory.
 ```r
 shape_data &lt;- read_ipums_sf("shape/")
 #&gt; options:        ENCODING=latin1 
-#&gt; Reading layer `ipums_conspuma' from data source 
-#&gt;   `C:\Users\derek\Documents\ipumsr-pa5928-guest-lecture\shape\ipums_conspuma.shp' 
-#&gt;   using driver `ESRI Shapefile'
+#&gt; Reading layer `ipums_conspuma' from data source `/mnt/rds/ipumsi-personal/ehrli097/ipumsr-pa5928-guest-lecture/shape/ipums_conspuma.shp' using driver `ESRI Shapefile'
 #&gt; Simple feature collection with 543 features and 3 fields
-#&gt; Geometry type: MULTIPOLYGON
-#&gt; Dimension:     XY
-#&gt; Bounding box:  xmin: -7115713 ymin: -1337508 xmax: 2258225 ymax: 4591616
-#&gt; Projected CRS: USA_Contiguous_Albers_Equal_Area_Conic
+#&gt; geometry type:  MULTIPOLYGON
+#&gt; dimension:      XY
+#&gt; bbox:           xmin: -7115713 ymin: -1337508 xmax: 2258225 ymax: 4591616
+#&gt; projected CRS:  USA_Contiguous_Albers_Equal_Area_Conic
 ```
 
 ???
@@ -2332,7 +2426,7 @@ For more on the differences between sp and sf, see the free online book
 
 ```r
 as_tibble(shape_data)
-#&gt; # A tibble: 543 x 4
+#&gt; # A tibble: 543 × 4
 #&gt;    CONSPUMA STATEFIP State                                                                                     geometry
 #&gt;       &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;                                                                           &lt;MULTIPOLYGON [m]&gt;
 #&gt;  1      540 02       Alaska     (((-3043869 3470021, -3043834 3469980, -3043821 3469944, -3043832 3469891, -3043833 ...
@@ -2345,7 +2439,7 @@ as_tibble(shape_data)
 #&gt;  8      495 53       Washington (((-1584859 1462223, -1583276 1461845, -1583169 1461826, -1582507 1461663, -1582289 ...
 #&gt;  9      496 53       Washington (((-2031282 1366306, -2031348 1366324, -2031429 1366422, -2031467 1366499, -2031474 ...
 #&gt; 10      497 53       Washington (((-1970094 1408574, -1970093 1408551, -1970059 1408587, -1969988 1408582, -1969951 ...
-#&gt; # ... with 533 more rows
+#&gt; # … with 533 more rows
 ```
 
 
@@ -2563,7 +2657,7 @@ these capabilities once the core functionality is well-tested and stable.
 
 
 ```r
-my_extract &lt;- define_extract(
+my_extract &lt;- define_extract_micro(
   "usa", 
   "Occupation by sex and age",
   c("us2017a", "us2018a"), 
@@ -2589,7 +2683,7 @@ Now let's get to some example code! We'll start with a brief example that shows
 a typical API workflow using the "pipe" operator from the magrittr package, 
 which is often used in conjunction with tidyverse packages such as dplyr.
 
-We start by defining an extract object using the `define_extract()` function, 
+We start by defining an extract object using the `define_extract_micro()` function, 
 and specifying 
 
 - a data collection -- in this case, "usa" 
@@ -2761,10 +2855,6 @@ client tools in the "ipumspy" module.
 
 If you are using ipumsr, the `define_extract_from_json()` function will create
 an extract object from a JSON-formatted definition shared by someone else.
-
-As Dan pointed out as we were preparing this webinar, this functionality could 
-also be useful for instructors who want to share an extract definition with 
-students for a class assignment.
 
 ---
 

@@ -1865,27 +1865,6 @@ declined since 1960.
 ]
 
 
-
----
-
-# Getting geographic data
-
-- For IPUMS USA (and several other projects), we provide geographic boundaries 
-  as well. For many areas, this includes harmonizing boundary changes over time.
-
---
-
-- Our extract includes the variable CONSPUMA, for "Consistent Public Use 
-  Microdata Areas"
-  
---
-
-- Note: CONSPUMA units are large
-  - For finer geographic detail, check out IPUMS NHGIS
-
-???
-[Read bullet points]
-
 ---
 
 # Getting geographic data
@@ -1918,10 +1897,9 @@ shape_data <- read_ipums_sf("shape/")
 ```
 
 ???
-The sp package (short for "spatial") has been around since 2005. It is more
-established and some other R spatial packages might still assume you are using
-sp data structures. The sf package (short for "simple features") is newer, but 
-seems to be on the rise as an alternative sp for some use cases.
+After you've downloaded your data, you can load it into R using the 
+`read_ipums_sf()` function. There is also a `read_ipums_sp()` function based on 
+the sp R package.
 
 For more on the differences between sp and sf, see the free online book 
 *Geocomputation with R*, which we link to at the end of the slides.
@@ -1972,12 +1950,8 @@ conspuma_data <- ipums_shape_inner_join(
 ```
 
 ???
-Before joining to shape data, we need to summarize our person level data at the 
-level of the geography we are joining to. Thus, the first block of code computes 
-the weighted proportion of persons with access to a phone for each CONSPUMA 
-unit in each year. Once our data are summarized so that each row represents a 
-value for one CONSPUMA unit in one year, we can join to the sf object we loaded 
-above.
+Next, we summarize our extract data at the CONSPUMA level, then we join to the 
+shape data.
 
 ---
 
@@ -1992,6 +1966,10 @@ ggplot(graph_data, aes(fill = `% with phone`)) +
   facet_wrap(~YEAR) + 
   geom_sf()
 ```
+
+???
+Finally, we filter down to the years for which we have shape data, and then we 
+can map our data with the `geom_sf()` function from ggplot2.
 
 ---
 
@@ -2201,34 +2179,6 @@ take a bit of time to execute, depending on the size of your extract.
 # Pipe-friendly example
 
 ```{r eval=FALSE}
-my_extract <- define_extract(
-  "usa", 
-  "Occupation by sex and age",
-  c("us2017a", "us2018a"), 
-  c("SEX", "AGE", "IND", "OCC")
-)
-```
-
-Extract definition to data in one piped expression!
-
-```{r eval=FALSE}
-data <- my_extract |> 
-  submit_extract() |> 
-  wait_for_extract() |> 
-  download_extract() |> 
-  read_ipums_micro()
-```
-
-
-???
-And just for fun, here's what the same piped expression looks like with the new
-base R pipe, available as of R 4.1.
-
----
-
-# Pipe-friendly example
-
-```{r eval=FALSE}
 my_extract %>% 
   submit_extract() %>% 
   wait_for_extract() %>% 
@@ -2289,15 +2239,15 @@ Then add a variable and resubmit:
 
 ```{r eval=FALSE}
 old_extract %>% 
-  revise_extract(vars_to_add = "EDUC") %>% 
+  revise_extract_micro(vars_to_add = "EDUC") %>% 
   submit_extract()
 ```
 
 ???
 Once we have the old extract definition, we can pass it to the 
-`revise_extract()` function to add a variable, then resubmit it.
+`revise_extract_micro()` function to add a variable, then resubmit it.
 
-The `revise_extract()` function currently allows you to add and remove variables
+The `revise_extract_micro()` function currently allows you to add and remove variables
 and samples, as well as change the description, data format, or data structure
 of your extract definition.
 

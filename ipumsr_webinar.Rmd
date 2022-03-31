@@ -873,7 +873,7 @@ However, you may need to install some additional packages used in the example co
 # Install R packages (as needed)
 
 ```{r, eval = FALSE}
-install.packages(ipumsr)
+install.packages("ipumsr")
 
 ## Tidyverse
 install.packages("dplyr")

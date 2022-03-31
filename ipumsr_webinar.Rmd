@@ -504,7 +504,7 @@ Looked at relationship between degrees of hearing impairment and mortality rates
 .pull-right[
 
 
-- **IGIS** Shapefiles for admin level 2
+- **IHGIS** Shapefiles for admin level 2
 
 - https://ihgis.ipums.org/
 

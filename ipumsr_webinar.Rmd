@@ -479,7 +479,6 @@ Looked at relationship between degrees of hearing impairment and mortality rates
 ]
 
 
-
 .pull-left[ 
 
 - **NHGIS** Shapefiles for all levels of US geography including tracts, from 1790 to the present
